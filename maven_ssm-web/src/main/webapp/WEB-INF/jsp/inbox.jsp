@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>收信信箱</title>
+    <title>收信箱</title>
     <link rel="shortcut icon" href="./../static/images/facecat.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -280,8 +280,8 @@
                 <!--/sub-heard-part-->
                 <div class="sub-heard-part">
                     <ol class="breadcrumb m-b-0">
-                        <li><a href="${pageContext.request.contextPath}/index/index.do">Home</a></li>
-                        <li class="active">Inbox</li>
+                        <li><a href="${pageContext.request.contextPath}/index/index.do">首页</a></li>
+                        <li class="active">收信箱</li>
                     </ol>
                 </div>
                 <!--/sub-heard-part-->

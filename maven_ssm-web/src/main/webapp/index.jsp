@@ -139,36 +139,36 @@
                                 <ul class="dropdown-menu two first">
                                     <li>
                                         <div class="notification_header">
-                                            <h3>You have 3 new messages  </h3>
+                                            <h3>您有3条新信息</h3>
                                         </div>
                                     </li>
                                     <li><a href="#">
                                         <div class="user_img"><img src="./static/images/1.jpg" alt=""></div>
                                         <div class="notification_desc">
-                                            <p>Lorem ipsum dolor sit amet</p>
-                                            <p><span>1 hour ago</span></p>
+                                            <p>心似时光飘零，以生...</p>
+                                            <p><span>1小时前</span></p>
                                         </div>
                                         <div class="clearfix"></div>
                                     </a></li>
                                     <li class="odd"><a href="#">
                                         <div class="user_img"><img src="./static/images/in.jpg" alt=""></div>
                                         <div class="notification_desc">
-                                            <p>Lorem ipsum dolor sit amet </p>
-                                            <p><span>1 hour ago</span></p>
+                                            <p>人生如棋，落子无悔... </p>
+                                            <p><span>2小时前</span></p>
                                         </div>
                                         <div class="clearfix"></div>
                                     </a></li>
                                     <li><a href="#">
                                         <div class="user_img"><img src="./static/images/in1.jpg" alt=""></div>
                                         <div class="notification_desc">
-                                            <p>Lorem ipsum dolor sit amet </p>
-                                            <p><span>1 hour ago</span></p>
+                                            <p>健实的身材来自持久... </p>
+                                            <p><span>3小时前</span></p>
                                         </div>
                                         <div class="clearfix"></div>
                                     </a></li>
                                     <li>
                                         <div class="notification_bottom">
-                                            <a href="#">See all messages</a>
+                                            <a href="#">查看所有信息</a>
                                         </div>
                                     </li>
                                 </ul>
@@ -180,36 +180,36 @@
                                 <ul class="dropdown-menu two">
                                     <li>
                                         <div class="notification_header">
-                                            <h3>You have 5 new notification</h3>
+                                            <h3>你有5条新通知</h3>
                                         </div>
                                     </li>
                                     <li><a href="#">
                                         <div class="user_img"><img src="./static/images/in.jpg" alt=""></div>
                                         <div class="notification_desc">
-                                            <p>Lorem ipsum dolor sit amet</p>
-                                            <p><span>1 hour ago</span></p>
+                                            <p>人生如棋，落子无悔...</p>
+                                            <p><span>1小时前</span></p>
                                         </div>
                                         <div class="clearfix"></div>
                                     </a></li>
                                     <li class="odd"><a href="#">
                                         <div class="user_img"><img src="./static/images/in5.jpg" alt=""></div>
                                         <div class="notification_desc">
-                                            <p>Lorem ipsum dolor sit amet </p>
-                                            <p><span>1 hour ago</span></p>
+                                            <p>出发咯!蹂躏脑筋不好的... </p>
+                                            <p><span>2小时前</span></p>
                                         </div>
                                         <div class="clearfix"></div>
                                     </a></li>
                                     <li><a href="#">
                                         <div class="user_img"><img src="./static/images/in8.jpg" alt=""></div>
                                         <div class="notification_desc">
-                                            <p>Lorem ipsum dolor sit amet </p>
-                                            <p><span>1 hour ago</span></p>
+                                            <p>周日被我射熄火了，所以... </p>
+                                            <p><span>3小时前</span></p>
                                         </div>
                                         <div class="clearfix"></div>
                                     </a></li>
                                     <li>
                                         <div class="notification_bottom">
-                                            <a href="#">See all notification</a>
+                                            <a href="#">查看所有通知</a>
                                         </div>
                                     </li>
                                 </ul>
@@ -328,7 +328,7 @@
                 <div class="candile">
                     <div class="candile-inner">
                         <%--K线图--%>
-                        <h3 class="sub-tittle">Candlestick Chart </h3>
+                        <h3 class="sub-tittle">K线图 </h3>
                         <div id="center"><div id="fig">
                             <script type="text/javascript+protovis">
 
@@ -399,7 +399,7 @@
                         <div class="chrt-bars">
                             <div class="col-md-6 chrt-two">
                                 <%--条线图--%>
-                                <h3 class="sub-tittle">Bar Chart </h3>
+                                <h3 class="sub-tittle">柱状图 </h3>
                                 <div id="chart2"></div>
                                 <script src="./static/js/fabochart.js"></script>
                                 <script>
@@ -432,7 +432,7 @@
                                 </script>
                             </div>
                             <div class="col-md-6 chrt-three">
-                                <h3 class="sub-tittle">Error Chart </h3>
+                                <h3 class="sub-tittle">误差图 </h3>
                                 <div id="chartdiv"></div>
                                 <script>
                                     var chart = AmCharts.makeChart( "chartdiv", {
@@ -511,7 +511,7 @@
                         <div class="pie">
                             <div class="col-md-6 chrt-two">
                                 <%--反值轴图--%>
-                                <h3 class="sub-tittle">Reversed Value Axis Chart</h3>
+                                <h3 class="sub-tittle">反值轴图</h3>
                                 <div id="chartdiv2"></div>
                                 <script>
                                     var chart = AmCharts.makeChart("chartdiv2", {
@@ -630,7 +630,7 @@
 
                             </div>
                             <div class="col-md-6 chrt-three second">
-                                <h3 class="sub-tittle">Radar chart</h3>
+                                <h3 class="sub-tittle">雷达图</h3>
                                 <div id="chartdiv4"></div>
                                 <script>
                                     var chart = AmCharts.makeChart( "chartdiv4", {
@@ -710,7 +710,7 @@
                         </div>
                         <div class="area">
                             <div class="col-md-6 chrt-two area">
-                                <h3 class="sub-tittle">Line Multi Chart</h3>
+                                <h3 class="sub-tittle">多线图t</h3>
                                 <div style="area">
                                     <canvas id="canvas" style="width:100%;height:100%"></canvas>
                                 </div>
@@ -793,7 +793,7 @@
                                 <script src="./static/js/Chart.js"></script>
                             </div>
                             <div class="col-md-6 chrt-three">
-                                <h3 class="sub-tittle">Stacked bar chart</h3>
+                                <h3 class="sub-tittle">堆叠条形图</h3>
                                 <div id="chartdiv1"></div>
 
                                 <script>
@@ -955,7 +955,7 @@
                         <!--//weather-charts-->
                         <div class="graph-visualization">
                             <div class="col-md-6 map-1">
-                                <h3 class="sub-tittle">Weather </h3>
+                                <h3 class="sub-tittle">天气 </h3>
                                 <div class="weather">
                                     <div class="weather-top">
                                         <div class="weather-top-left">
@@ -1113,7 +1113,7 @@
                                 <div class="profile-nav alt">
                                     <section class="panel">
                                         <div class="user-heading alt clock-row terques-bg">
-                                            <h3 class="sub-tittle clock">Easy Clock </h3>
+                                            <h3 class="sub-tittle clock">简易时钟 </h3>
                                         </div>
                                         <ul id="clock">
                                             <li id="sec"></li>
@@ -1158,7 +1158,7 @@
                         <!--//charts-->
                         <div class="area-charts">
                             <div class="col-md-6 panel-chrt">
-                                <h3 class="sub-tittle dyna">Dynamic Speedometer </h3>
+                                <h3 class="sub-tittle dyna">动态车速里程表 </h3>
                                 <div id="wrapper">
                                     <div id="left">
                                         <div>
@@ -1179,7 +1179,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 tini-time-line">
-                                <h3 class="sub-tittle">Time line </h3>
+                                <h3 class="sub-tittle">时间线 </h3>
                                 <ul class="timeline">
                                     <li>
                                         <div class="timeline-badge info"><i class="fa fa-smile-o"></i></div>
@@ -1240,13 +1240,13 @@
                                 <div class="col-md-4 dev-col">
 
                                     <div class="dev-widget dev-widget-transparent">
-                                        <h2 class="inner one">Server Usage</h2>
-                                        <p>Today server usage in percentages</p>
+                                        <h2 class="inner one">服务器使用</h2>
+                                        <p>今天服务器使用率：</p>
                                         <div class="dev-stat"><span class="counter">68</span>%</div>
                                         <div class="progress progress-bar-xs">
                                             <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
                                         </div>
-                                        <p>We Todayly recommend you change your plan to <strong>Pro</strong>. Click here to get more details.</p>
+                                        <p>我们建议您将今天的计划改为 <strong>Pro</strong>.点击获取更多信息.</p>
 
                                         <a href="#" class="dev-drop">Take a closer look <span class="fa fa-angle-right pull-right"></span></a>
                                     </div>
@@ -1255,13 +1255,13 @@
                                 <div class="col-md-4 dev-col mid">
 
                                     <div class="dev-widget dev-widget-transparent dev-widget-success">
-                                        <h3 class="inner">Today Earnings</h3>
+                                        <h3 class="inner">今日收益</h3>
                                         <p>This is Today earnings per last year</p>
                                         <div class="dev-stat">$<span class="counter">75,332</span></div>
                                         <div class="progress progress-bar-xs">
                                             <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 79%;"></div>
                                         </div>
-                                        <p>We happy to notice you that you become an Elite customer, and you can get some custom sugar.</p>
+                                        <p>我们很高兴地通知您，您成为一个精英客户，您可以得到一些定制的糖。</p>
 
                                         <a href="#" class="dev-drop">Take a closer look <span class="fa fa-angle-right pull-right"></span></a>
                                     </div>
@@ -1270,13 +1270,13 @@
                                 <div class="col-md-4 dev-col">
 
                                     <div class="dev-widget dev-widget-transparent dev-widget-danger">
-                                        <h3 class="inner">Your Balance</h3>
+                                        <h3 class="inner">收支平衡</h3>
                                         <p>All your earnings for this time</p>
                                         <div class="dev-stat">$<span class="counter">5,321</span></div>
                                         <div class="progress progress-bar-xs">
                                             <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
                                         </div>
-                                        <p>You can withdraw this money in end of each month. Also you can spend it on our marketplace.</p>
+                                        <p>您可以在每个月底收回这笔钱。您也可以把它花在我们的市场上。</p>
 
                                         <a href="#" class="dev-drop">Take a closer look <span class="fa fa-angle-right pull-right"></span></a>
                                     </div>
@@ -1325,10 +1325,10 @@
         <div class="menu">
             <ul id="menu" >
                 <li><a href="${pageContext.request.contextPath}/index/index.do"><i class="fa fa-tachometer"></i> <span>仪表盘</span></a></li>
-                <li id="menu-academico" ><a href="#"><i class="fa fa-table"></i> <span> Tabs &amp; Panels</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+                <li id="menu-academico" ><a href="#"><i class="fa fa-table"></i> <span> 标签</span> <span class="fa fa-angle-right" style="float: right"></span></a>
                     <ul id="menu-academico-sub" >
-                        <li id="menu-academico-avaliacoes" ><a href="${pageContext.request.contextPath}/index/tabs.do"> Tabs &amp; Panels</a></li>
-                        <li id="menu-academico-boletim" ><a href="${pageContext.request.contextPath}/index/widget.do">Widgets</a></li>
+                        <li id="menu-academico-avaliacoes" ><a href="${pageContext.request.contextPath}/index/tabs.do"> 标签</a></li>
+                        <li id="menu-academico-boletim" ><a href="${pageContext.request.contextPath}/index/widget.do">组件</a></li>
                         <li id="menu-academico-avaliacoes" ><a href="${pageContext.request.contextPath}/index/calendar.do">日历</a></li>
 
                     </ul>
@@ -1341,7 +1341,7 @@
                         <li id="menu-academico-boletim" ><a href="${pageContext.request.contextPath}/index/buttons.do">按钮</a></li>
                     </ul>
                 </li>
-                <li><a href="${pageContext.request.contextPath}/index/typography.do"><i class="lnr lnr-pencil"></i> <span>Typography</span></a></li>
+                <li><a href="${pageContext.request.contextPath}/index/typography.do"><i class="lnr lnr-pencil"></i> <span>排版</span></a></li>
                 <li id="menu-academico" ><a href="#"><i class="lnr lnr-book"></i> <span>页面</span> <span class="fa fa-angle-right" style="float: right"></span></a>
                     <ul id="menu-academico-sub" >
                         <li id="menu-academico-avaliacoes" ><a href="${pageContext.request.contextPath}/user/Login.do">登录</a></li>
@@ -1366,18 +1366,18 @@
 
                     </ul>
                 </li>
-                <li><a href="chart.html"><i class="lnr lnr-chart-bars"></i> <span>Charts</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+                <li><a href="chart.html"><i class="lnr lnr-chart-bars"></i> <span>图表</span> <span class="fa fa-angle-right" style="float: right"></span></a>
                     <ul>
                         <li><a href="${pageContext.request.contextPath}/index/map.do"><i class="lnr lnr-map"></i> 地图</a></li>
-                        <li><a href="${pageContext.request.contextPath}/index/graph.do"><i class="lnr lnr-apartment"></i> Graph Visualization</a></li>
+                        <li><a href="${pageContext.request.contextPath}/index/graph.do"><i class="lnr lnr-apartment"></i> 图形 可视化</a></li>
                     </ul>
                 </li>
-                <li id="menu-comunicacao" ><a href="#"><i class="fa fa-smile-o"></i> <span>More</span><span class="fa fa-angle-double-right" style="float: right"></span></a>
+                <li id="menu-comunicacao" ><a href="#"><i class="fa fa-smile-o"></i> <span>更多</span><span class="fa fa-angle-double-right" style="float: right"></span></a>
                     <ul id="menu-comunicacao-sub" >
-                        <li id="menu-mensagens" style="width:120px" ><a href="project.html">Projects <i class="fa fa-angle-right" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
+                        <li id="menu-mensagens" style="width:120px" ><a href="project.html">项目 <i class="fa fa-angle-right" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
                             <ul id="menu-mensagens-sub" >
-                                <li id="menu-mensagens-enviadas" style="width:130px" ><a href="${pageContext.request.contextPath}/index/ribbon.do">Ribbons</a></li>
-                                <li id="menu-mensagens-recebidas"  style="width:130px"><a href="${pageContext.request.contextPath}/index/blank.do">Blank</a></li>
+                                <li id="menu-mensagens-enviadas" style="width:130px" ><a href="${pageContext.request.contextPath}/index/ribbon.do">条带</a></li>
+                                <li id="menu-mensagens-recebidas"  style="width:130px"><a href="${pageContext.request.contextPath}/index/blank.do">空白页</a></li>
                             </ul>
                         </li>
                         <li id="menu-arquivos" ><a href="${pageContext.request.contextPath}/index/500.do">500</a></li>
@@ -1409,8 +1409,8 @@
     });
 </script>
 <!--js -->
-<link rel="stylesheet" href="./static/css/vroom.css">
-<script type="text/javascript" src="./static/js/vroom.js"></script>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/vroom.css">
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/vroom.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/TweenLite.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/CSSPlugin.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/jquery.nicescroll.js"></script>

@@ -36,7 +36,7 @@
         <h3>500</h3>
         <p class="sorry">Sorry, there seem to be some problems with your request but Good news! It's not us, it's you!</p>
         <div class="error-btn">
-            <a class="read fourth" href="${pageContext.request.contextPath}/index/index.do">Return to Home</a>
+            <a class="read fourth" href="${pageContext.request.contextPath}/index/index.do">返回首页</a>
         </div>
     </div>
 

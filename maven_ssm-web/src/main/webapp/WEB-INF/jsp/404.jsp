@@ -36,7 +36,7 @@
         <span>Whoops! Page not found</span>
         <p>The page your are looking for has escaped from our servers.</p>
         <div class="error-btn">
-            <a class="read fourth" href="${pageContext.request.contextPath}/index/index.do">Return to Home</a>
+            <a class="read fourth" href="${pageContext.request.contextPath}/index/index.do">返回首页</a>
         </div>
     </div>
 

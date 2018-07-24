@@ -269,8 +269,8 @@
                 <!--/sub-heard-part-->
                 <div class="sub-heard-part">
                     <ol class="breadcrumb m-b-0">
-                        <li><a href="index.html">Home</a></li>
-                        <li class="active">Typography Page</li>
+                        <li><a href="${pageContext.request.contextPath}/index/index.do">首页</a></li>
+                        <li class="active">排版页</li>
                     </ol>
                 </div>
                 <!--/sub-heard-part-->

@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>profile</title>
+    <title>简介</title>
     <link rel="shortcut icon" href="./../static/images/facecat.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -270,53 +270,53 @@
                 <!--sub-heard-part-->
                 <div class="sub-heard-part">
                     <ol class="breadcrumb m-b-0">
-                        <li><a href="${pageContext.request.contextPath}/index/index.do">Home</a></li>
-                        <li class="active">Profile</li>
+                        <li><a href="${pageContext.request.contextPath}/index/index.do">首页</a></li>
+                        <li class="active">简介</li>
                     </ol>
                 </div>
                 <!--//sub-heard-part-->
                 <!--/profile-->
-                <h3 class="sub-tittle pro">Profile</h3>
+                <h3 class="sub-tittle pro">简介</h3>
                 <div class="profile-widget">
                     <img src="${pageContext.request.contextPath}/static/images/admin1.jpg" alt=" " />
-                    <h2>Jasmin Leo</h2>
-                    <p>Admin</p>
+                    <h2>程闯亮</h2>
+                    <p>管理员</p>
                 </div>
                 <!--/profile-inner-->
                 <div class="profile-section-inner">
                     <div class="col-md-6 profile-info">
-                        <h3 class="inner-tittle">Personal Information </h3>
+                        <h3 class="inner-tittle">个人信息 </h3>
                         <div class="main-grid3">
                             <div class="p-20">
                                 <div class="about-info-p">
-                                    <strong>Full Name</strong>
+                                    <strong>全名</strong>
                                     <br>
-                                    <p class="text-muted">Jasmin Leo</p>
+                                    <p class="text-muted">程闯亮</p>
                                 </div>
                                 <div class="about-info-p">
-                                    <strong>Mobile</strong>
+                                    <strong>手机</strong>
                                     <br>
-                                    <p class="text-muted">(123) 123 1234</p>
+                                    <p class="text-muted">155 **** 6020</p>
                                 </div>
                                 <div class="about-info-p">
-                                    <strong>Email</strong>
+                                    <strong>邮箱</strong>
                                     <br>
-                                    <p class="text-muted"><a href="mailto:info@example.com">mail@example.com</a></p>
+                                    <p class="text-muted"><a href="mailto:info@example.com">246417****@qq.com</a></p>
                                 </div>
                                 <div class="about-info-p m-b-0">
-                                    <strong>Location</strong>
+                                    <strong>位置</strong>
                                     <br>
-                                    <p class="text-muted">London, UK</p>
+                                    <p class="text-muted">辽宁,沈阳</p>
                                 </div>
                             </div>
                         </div>
-                        <h3 class="inner-tittle">Biography </h3>
+                        <h3 class="inner-tittle">描述 </h3>
                         <div class="main-grid3 p-skill">
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                             <p class="para">But also the leap into electronic typesetting, remaining essentially unchanged.</p>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                         </div>
-                        <h3 class="inner-tittle two">Skills </h3>
+                        <h3 class="inner-tittle two">技能 </h3>
                         <div class="main-grid3">
                             <div class="bar">
                                 <p>UI/UX</p>
@@ -345,7 +345,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 profile-info two">
-                        <h3 class="inner-tittle">Activity </h3>
+                        <h3 class="inner-tittle">活动 </h3>
                         <div class="main-grid3 p-skill">
 
                             <ul class="timeline">
@@ -353,11 +353,11 @@
                                     <div class="timeline-badge info"><i class="fa fa-smile-o"></i></div>
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
-                                            <h4 class="timeline-title"><a href="profile.html">Jasmin Leo</a></h4>
+                                            <h4 class="timeline-title"><a href="/index/profile.do">程闯亮</a></h4>
                                         </div>
                                         <div class="timeline-body">
-                                            <p class="time">5 Minutes ago</p>
-                                            <p>Uploaded 2 new Photos <i class="fa fa-picture-o"></i></p>
+                                            <p class="time">1分钟前</p>
+                                            <p>更新2张图片 <i class="fa fa-picture-o"></i></p>
                                         </div>
                                     </div>
                                 </li>
@@ -366,11 +366,11 @@
                                     <div class="timeline-badge primary"><i class="fa fa-star-o"></i></div>
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
-                                            <h4 class="timeline-title"><a href="profile.html">Jasmin Leo</a></h4>
+                                            <h4 class="timeline-title"><a href="/index/profile.do">程闯亮</a></h4>
                                         </div>
                                         <div class="timeline-body">
-                                            <p class="time">2 Minutes ago</p>
-                                            <p>Uploaded 2 new Photos <i class="fa fa-picture-o"></i></p>
+                                            <p class="time">6分钟前</p>
+                                            <p>更新4张图片 <i class="fa fa-picture-o"></i></p>
                                         </div>
                                     </div>
                                 </li>
@@ -381,11 +381,11 @@
                                     <div class="timeline-badge danger"><i class="fa fa-times-circle-o"></i></div>
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
-                                            <h4 class="timeline-title"><a href="profile.html">Jasmin Leo</a></h4>
+                                            <h4 class="timeline-title"><a href="/index/profile.do">程闯亮</a></h4>
                                         </div>
                                         <div class="timeline-body">
-                                            <p class="time">10 Minutes ago</p>
-                                            <p>Uploaded 5 new Photos <i class="fa fa-picture-o"></i></p>
+                                            <p class="time">10分钟前</p>
+                                            <p>更新5张图片 <i class="fa fa-picture-o"></i></p>
                                         </div>
                                     </div>
                                 </li>
@@ -394,11 +394,11 @@
                                     <div class="timeline-badge success"><i class="fa fa-check-circle-o"></i></div>
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
-                                            <h4 class="timeline-title"><a href="profile.html">Jasmin Leo</a></h4>
+                                            <h4 class="timeline-title"><a href="/index/profile.do">程闯亮</a></h4>
                                         </div>
                                         <div class="timeline-body">
-                                            <p class="time">15 Minutes ago</p>
-                                            <p>Uploaded 2 new Photos <i class="fa fa-picture-o"></i></p>
+                                            <p class="time">15分钟前</p>
+                                            <p>更新2张图片 <i class="fa fa-picture-o"></i></p>
                                         </div>
                                     </div>
                                 </li>
@@ -408,7 +408,7 @@
                     </div>
                     <!--/map-->
                     <div class="col-md-6 profile-info two">
-                        <h3 class="inner-tittle two">My Office </h3>
+                        <h3 class="inner-tittle two">办公地点 </h3>
                         <div class="main-grid3 map">
 
                             <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Purwokerto,+Central+Java,+Indonesia&amp;aq=0&amp;oq=purwo&amp;sll=37.0625,-95.677068&amp;sspn=50.291089,104.238281&amp;ie=UTF8&amp;hq=&amp;hnear=Purwokerto,+Banyumas,+Central+Java,+Indonesia&amp;ll=-7.431391,109.24783&amp;spn=0.031022,0.050898&amp;t=m&amp;z=14&amp;output=embed"></iframe>
