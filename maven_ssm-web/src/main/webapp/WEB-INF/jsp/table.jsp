@@ -1,9 +1,8 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2018/7/4 0004
-  Time: 下午 9:00
-  To change this template use File | Settings | File Templates.
+  User: ChengChuangLiang
+  Date: 2018/7/4
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -275,57 +274,13 @@
                 </div>
                 <!--//sub-heard-part-->
                 <div class="graph-visual tables-main">
-                    <h2 class="inner-tittle">Basic Table</h2>
-                    <div class="graph">
-                        <div class="tables">
-
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>User Name</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                    </div>
-                    <h3 class="inner-tittle two">Bordered Table </h3>
-                    <div class="graph">
-                        <div class="tables">
-                            <table class="table table-bordered"> <thead> <tr> <th>#</th> <th>First Name</th> <th>Last Name</th> <th>User Name</th> </tr> </thead> <tbody> <tr> <th scope="row">1</th> <td>Mark</td> <td>Otto</td> <td>@mdo</td> </tr> <tr> <th scope="row">2</th> <td>Jacob</td> <td>Thornton</td> <td>@fat</td> </tr> <tr> <th scope="row">3</th> <td>Larry</td> <td>the Bird</td> <td>@twitter</td> </tr> </tbody> </table>
-                        </div>
-
-                    </div>
-
 
                     <h3 class="inner-tittle two">Hover Rows Table </h3>
                     <div class="graph">
                         <div class="tables">
 
-                            <table class="table table-hover"> <thead>
+                            <table class="table table-hover">
+                            <thead>
                             <tr>
                                 <th>编号</th>
                                 <th>姓名</th>
@@ -333,24 +288,15 @@
                                 <th>住址</th>
                             </tr>
                             </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td> </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                        <td>@twitter</td>
-                                    </tr>
+                            <tbody>
+                            <c:forEach items="${TableDataList}" var="data">
+                                <tr>
+                                    <th scope="row">${data.id}</th>
+                                    <td>${data.name}</td>
+                                    <td>${data.phone}</td>
+                                    <td>${data.address}</td>
+                                </tr>
+                            </c:forEach>
                             </tbody>
                             </table>
                         </div>
@@ -429,11 +375,48 @@
                         </div>
 
                     </div>
+
+                    <script type="text/javascript">
+                        window.onload=function (ev) {
+                            alert("here")
+                            $(function () {
+                               $("#tr1").css("background-color","#3f903f ") ;
+                               $("#tr3").css("background-color","#f0ad4e !important ") ;
+                            });
+
+
+
+                        }
+
+                    </script>
+
+
                     <h3 class="inner-tittle two">Responsive Table </h3>
                     <div class="graph">
                         <div class="tables">
 
-                            <table class="table table-bordered"> <thead> <tr> <th>#</th> <th>Table heading</th> <th>Table heading</th> <th>Table heading</th> <th>Table heading</th> </tr> </thead> <tbody> <tr> <th scope="row">1</th> <td>Table cell</td> <td>Table cell</td> <td>Table cell</td> <td>Table cell</td> </tr> <tr> <th scope="row">2</th> <td>Table cell</td> <td>Table cell</td> <td>Table cell</td> <td>Table cell</td> </tr> <tr> <th scope="row">3</th> <td>Table cell</td> <td>Table cell</td> <td>Table cell</td> <td>Table cell</td> </tr> </tbody> </table>
+                            <table class="table table-bordered" id="tbname">
+                                <thead>
+                                <tr>
+                                    <th>编号</th>
+                                    <th>姓名</th>
+                                    <th>电话</th>
+                                    <th>住址</th>
+                                    <th>Table heading</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <c:forEach items="${TableDataList}" var="data">
+                                <tr id="tr${data.id}">
+                                    <th scope="row">${data.id}</th>
+                                    <td>${data.name}</td>
+                                    <td>${data.phone}</td>
+                                    <td>${data.address}</td>
+                                    <td>Table cell</td>
+                                </tr>
+                                </c:forEach>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>

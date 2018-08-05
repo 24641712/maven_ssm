@@ -13,7 +13,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>maven-serviceImpl</module>
+        <module>../maven_ssm-serviceimpl</module>
     </modules>
     <!--添加对maven_ssm-model的依赖-->
     <dependencies>

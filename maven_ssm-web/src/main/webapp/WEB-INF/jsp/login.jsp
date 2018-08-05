@@ -1,15 +1,13 @@
 <%--
   Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2018/7/1 0001
-  Time: 下午 6:15
-  To change this template use File | Settings | File Templates.
+  User: ChengChuangLiang
+  Date: 2018/8/5
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>登录</title>
-    <link rel="shortcut icon" href="./../static/images/facecat.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../static/images/facecat.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="" />
@@ -85,9 +83,6 @@
 <script src="${pageContext.request.contextPath}/static/js/scripts.js"></script>
 <!-- Bootstrap Core JavaScript -->
 <script src="${pageContext.request.contextPath}/static/js/bootstrap.min.js"></script>
-
-
-
 
 </body>
 </html>

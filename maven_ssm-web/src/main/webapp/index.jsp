@@ -74,12 +74,12 @@
                         <ul class="nofitications-dropdown">
                             <li class="dropdown note dra-down">
                                 <div id="dd" class="wrapper-dropdown-3" tabindex="1">
-                                    <span>意大利语</span>
+                                    <span>法语</span>
                                     <ul class="dropdown">
-                                        <li><a class="deutsch">法语</a></li>
-                                        <li><a class="english">意大利语</a></li>
-                                        <li><a class="espana">巴西语</a></li>
-                                        <li><a class="russian">美语</a></li>
+                                        <li><a class="deutsch">英语</a></li>
+                                        <li><a class="english">日语</a></li>
+                                        <li><a class="espana">韩语</a></li>
+                                        <li><a class="russian">汉语</a></li>
 
                                     </ul>
                                 </div>

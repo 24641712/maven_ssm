@@ -1,4 +1,4 @@
-package cn.lnu.dao;
+package cn.lnu.dao.user;
 
 import cn.lnu.entity.User;
 

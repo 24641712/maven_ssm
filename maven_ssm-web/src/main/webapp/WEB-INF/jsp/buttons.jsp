@@ -1,15 +1,14 @@
 <%--
   Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2018/7/4 0004
-  Time: 下午 9:08
-  To change this template use File | Settings | File Templates.
+  User: ChengChuangLiang
+  Date: 2018/7/4
+  Time: 9:08
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>按钮功能</title>
-    <link rel="shortcut icon" href="./../static/images/facecat.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../static/images/facecat.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="" />
@@ -336,19 +335,19 @@
                             <h3 class="inner-tittle two">Toggle Buttons </h3>
                             <div class="grid-1">
                                 <div class="inner-toggle">
-																		<span class="toggle">
-																					<input type="checkbox">
-																					<label data-off="&#10006;" data-on="&#10004;"></label>
-																				</span>
+                                    <span class="toggle">
+                                        <input type="checkbox">
+                                        <label data-off="&#10006;" data-on="&#10004;"></label>
+                                    </span>
 
                                     <span class="toggle">
-																					<input type="checkbox">
-																					<label data-off="&#9724;" data-on="&#9654;"></label>
-																				</span>
+                                        <input type="checkbox">
+                                        <label data-off="&#9724;" data-on="&#9654;"></label>
+                                    </span>
                                     <span class="toggle">
-																					<input type="checkbox">
-																					<label data-off="Stop" data-on="Play"></label>
-																				</span>
+                                        <input type="checkbox">
+                                        <label data-off="Stop" data-on="Play"></label>
+                                    </span>
                                 </div>
                             </div>
                         </div>

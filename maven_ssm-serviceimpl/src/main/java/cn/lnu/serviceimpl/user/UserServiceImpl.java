@@ -1,7 +1,7 @@
 package cn.lnu.serviceimpl.user;
 
 import cn.lnu.entity.User;
-import cn.lnu.dao.UserDao;
+import cn.lnu.dao.user.UserDao;
 import cn.lnu.service.UserService;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
