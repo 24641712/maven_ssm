@@ -219,12 +219,12 @@
                                 <ul class="dropdown-menu two">
                                     <li>
                                         <div class="notification_header">
-                                            <h3>You have 9 pending task</h3>
+                                            <h3>你有9条待处理的任务</h3>
                                         </div>
                                     </li>
                                     <li><a href="#">
                                         <div class="task-info">
-                                            <span class="task-desc">Database update</span><span class="percentage">40%</span>
+                                            <span class="task-desc">数据库更新</span><span class="percentage">40%</span>
                                             <div class="clearfix"></div>
                                         </div>
                                         <div class="progress progress-striped active">
@@ -233,7 +233,7 @@
                                     </a></li>
                                     <li><a href="#">
                                         <div class="task-info">
-                                            <span class="task-desc">Dashboard done</span><span class="percentage">90%</span>
+                                            <span class="task-desc">任务进度</span><span class="percentage">90%</span>
                                             <div class="clearfix"></div>
                                         </div>
 
@@ -243,7 +243,7 @@
                                     </a></li>
                                     <li><a href="#">
                                         <div class="task-info">
-                                            <span class="task-desc">Mobile App</span><span class="percentage">33%</span>
+                                            <span class="task-desc">移动 App</span><span class="percentage">33%</span>
                                             <div class="clearfix"></div>
                                         </div>
                                         <div class="progress progress-striped active">
@@ -252,7 +252,7 @@
                                     </a></li>
                                     <li><a href="#">
                                         <div class="task-info">
-                                            <span class="task-desc">Issues fixed</span><span class="percentage">80%</span>
+                                            <span class="task-desc">问题修正</span><span class="percentage">80%</span>
                                             <div class="clearfix"></div>
                                         </div>
                                         <div class="progress progress-striped active">
@@ -261,7 +261,7 @@
                                     </a></li>
                                     <li>
                                         <div class="notification_bottom">
-                                            <a href="#">See all pending task</a>
+                                            <a href="#">查看所有待完成任务</a>
                                         </div>
                                     </li>
                                 </ul>

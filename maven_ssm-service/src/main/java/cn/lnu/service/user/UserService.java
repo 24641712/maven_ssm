@@ -1,7 +1,7 @@
-package cn.lnu.service;
+package cn.lnu.service.user;
 
 import javax.annotation.Resource;
-import cn.lnu.entity.User;
+import cn.lnu.entity.user.User;
 
 /**
  * @author ChengChuangLiang

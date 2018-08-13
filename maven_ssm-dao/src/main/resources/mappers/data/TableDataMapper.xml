@@ -28,5 +28,16 @@
      select * from hrtable
   </select>
 
+  <select id="selectCount" resultType="int">
+      select count(*) from hrtable
+  </select>
+
+  <select id="findByPage" resultType="TableData">
+     select * from hrtable
+     <if test="start != null and end != null">
+        limit #{start},#{size}
+     </if>
+  </select>
+
 
 </mapper>

@@ -1,13 +1,16 @@
-package cn.lnu.entity;
+package cn.lnu.entity.user;
 
 /**
  * @author ChengChuangLiang
  * @date 2018/7/21
  */
 public class User {
-    private int id;
-    private String username;
-    private String password;
+
+    private int id;//用户编号
+
+    private String username;//用户名
+
+    private String password;//用户密码
 
     public int getId() {
         return id;

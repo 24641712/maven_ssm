@@ -1,7 +1,7 @@
 package cn.lnu.controller;
 
-import cn.lnu.entity.User;
-import cn.lnu.service.UserService;
+import cn.lnu.entity.user.User;
+import cn.lnu.service.user.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;

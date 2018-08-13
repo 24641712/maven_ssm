@@ -1,6 +1,6 @@
 package cn.lnu.dao.user;
 
-import cn.lnu.entity.User;
+import cn.lnu.entity.user.User;
 
 /**
  * @author ChengChuangLiang

@@ -1,11 +1,11 @@
 package cn.lnu.controller;
 
-import cn.lnu.entity.TableData;
-import cn.lnu.service.IndexService;
-import org.springframework.beans.factory.annotation.Autowired;
+import cn.lnu.entity.data.TableData;
+import cn.lnu.service.data.IndexService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
@@ -158,7 +158,9 @@ public class IndexController {
     }
 
     @RequestMapping("/table")
-    public ModelAndView returnTable(){
+    public ModelAndView returnTable(@RequestParam(value="currentPage",defaultValue="1",required = false)
+                                                int currentPage){
+
         //调用业务层查找数据
         List<TableData> list = indexService.find();
 
@@ -166,6 +168,8 @@ public class IndexController {
 
         //将数据放到request中
         modelAndView.addObject("TableDataList",list);
+
+        modelAndView.addObject("pagemsg",indexService.findByPage(currentPage));
 
         //指定视图
         modelAndView.setViewName("/table");

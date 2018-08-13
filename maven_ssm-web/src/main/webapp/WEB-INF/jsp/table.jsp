@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
-  User: ChengChuangLiang
+  User: ChuangLiang Cheng
   Date: 2018/7/4
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -300,7 +300,77 @@
                             </tbody>
                             </table>
                         </div>
+                    </div>
 
+                    <%--模态框（model）翻页--%>
+                    <div class="divContent">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
+                                <li>
+                                    <%--上一页--%>
+                                    <c:choose>
+                                        <c:when test="${pagemsg.currPage eq 1}">
+                                            <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">上一页</span></a></li>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <a href="#">
+                                                <span aria-hidden="true">上一页</span>
+                                            </a>
+                                        </c:otherwise>
+                                    </c:choose>
+                                </li>
+                                <%--
+                                我们需要计算页码列表的开始和结束位置，即两个变量begin和end
+                                计算它们需要通过当前页码！
+                                1.总页数不足6页-->begin=1,end=最大页
+                                2.通过公式设置begin和end，begin=当前页-1，end=当前页+3
+                                3.如果begin<1，那么begin=1，end=6
+                                4.如果end>tp,让begin=tp-5,end=tp
+                                --%>
+                                <c:choose>
+                                    <c:when test="${pagemsg.totalPage <= 6}">
+                                        <c:set var="begin" value="1"/>
+                                        <c:set var="end" value="${pagemsg.totalPage}"/>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <c:set var="begin" value="${pagemsg.currPage-2}"/>
+                                        <c:set var="end" value="${pagemsg.currPage+3}"/>
+                                             <c:if test="${end>pagemsg.totalPage}">
+                                                 <c:set var="begin" value="${pagemsg.totalPage-5}"/>
+                                                 <c:set var="end" value="${pagemsg.totalPage}"/>
+                                             </c:if>
+                                    </c:otherwise>
+                                </c:choose>
+                                <c:forEach begin="${begin}" end="${end}" var="i">
+                                    <c:choose>
+                                        <c:when test="${i eq pagemsg.currPage}">
+                                            <li class="disabled"><a href="#">${i}<span class="sr-only">(current)</span></a></li>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <li><a href="#" class="aBtn">${i}</a></li>
+                                        </c:otherwise>
+                                    </c:choose>
+                                </c:forEach>
+                                <%--显示。。。。--%>
+                                <c:if test="${end < pagemsg.totalPage}">
+                                    <li><span class="spanApostrophe">...</span></li>
+                                </c:if>
+                                  <%--下一页--%>
+                                <c:choose>
+                                    <c:when test="${pagemsg.currPage eq pagemsg.totalPage}">
+                                        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">下一页</span></a></li>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <li>
+                                            <a aria-label="Next"
+                                               href="" class="aBtn bold"><span aria-hidden="true">下一页</span></a>
+                                        </li>
+                                    </c:otherwise>
+                                </c:choose>
+                                 <%--共N页 到M页--%>
+                                <li><span>共${pagemsg.totalPage}页</span></li>
+                            </ul>
+                        </nav>
                     </div>
 
                     <h3 class="inner-tittle two">Colored Rows Table </h3>
@@ -378,16 +448,11 @@
 
                     <script type="text/javascript">
                         window.onload=function (ev) {
-                            alert("here")
                             $(function () {
                                $("#tr1").css("background-color","#3f903f ") ;
                                $("#tr3").css("background-color","#f0ad4e !important ") ;
                             });
-
-
-
                         }
-
                     </script>
 
 
@@ -406,8 +471,8 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <c:forEach items="${TableDataList}" var="data">
-                                <tr id="tr${data.id}">
+                                <c:forEach items="${TableDataList}" var="data" varStatus="status">
+                                <tr id="tr${status.index+1}">
                                     <th scope="row">${data.id}</th>
                                     <td>${data.name}</td>
                                     <td>${data.phone}</td>

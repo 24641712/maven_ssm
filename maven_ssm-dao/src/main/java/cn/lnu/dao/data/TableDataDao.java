@@ -1,7 +1,8 @@
 package cn.lnu.dao.data;
 
-import cn.lnu.entity.TableData;
+import cn.lnu.entity.data.TableData;
 
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -21,6 +22,9 @@ public interface TableDataDao {
 
     public List<TableData> find();//查找所有数据
 
+    public int selectCount();//显示数据总条数
+
+    public List<TableData> findByPage(HashMap<String,Object> map); //按页查找数据
 
 
 

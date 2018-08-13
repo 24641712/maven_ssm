@@ -1,6 +1,7 @@
-package cn.lnu.entity;
+package cn.lnu.entity.data;
 
 public class TableData {
+
     private int id;//表数据id
 
     private String name;//表数据名字
