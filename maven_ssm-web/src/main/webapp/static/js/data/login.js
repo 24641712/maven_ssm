@@ -1,35 +1,17 @@
-// function CheckLogin(){
-//     username=$("#username").val();
-//     password=$("#password").val();
-//     var url="/testweb/index/index.do";
-//     var errorurl="testweb/index/500.do";
-//     alert("username="+username+"  password"+password);
-//
-//
-//
-// }
-
-
 $(function () {
-
-    $("#submit").ajaxSubmit
 
     $("#submit").click(function () {
         username=$("#username").val();
         password=$("#password").val();
         var regInfo = {"username":username,"password":password};
-
-        var successurl="/maven_ssm-web/index/index.do";
-        alert("username="+username+"  password="+password);
-
+        var successurl="/index/index.do";
         $.ajax({
-              data:JSON.stringify(regInfo),
-              type:"POST",
-              dateType:"json",
-              url:"./loginCheck.do",
-              contentType:"application/json",
+            data:regInfo,
+            type:"POST",
+            dataType:"text",
+            url:"./loginCheck.do",
             success:function (responseData) {
-                if (responseData.result == "true"){
+                if (responseData == "true"){
                     alert("登录成功");
                     window.location.href = successurl;
                 }else {
@@ -37,12 +19,10 @@ $(function () {
                 }
             },
             error:function (XMLHttpRequest,textStatus,errorThrown) {
-                alert("result:"+textStatus)
+                alert("result:"+textStatus);
             }
         });
-
     });
 });
-
 
 

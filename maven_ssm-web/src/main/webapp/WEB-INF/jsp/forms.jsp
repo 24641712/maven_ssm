@@ -300,7 +300,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 graph-2 second">
-                                <h3 class="inner-tittle two">Inline Form </h3>
+                                <h3 class="inner-tittle two">内联 表单 </h3>
                                 <div class="grid-1">
                                     <div class="form-body">
                                         <div data-example-id="simple-form-inline"> <form class="form-inline"> <div class="form-group"> <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email"> </div> <div class="form-group"> <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password"> </div> <div class="checkbox"> <label> <input type="checkbox"> Remember me </label> </div> <button type="submit" class="btn btn-default">Sign in</button> </form> </div>
@@ -313,7 +313,7 @@
                         <!--/set-2-->
                         <div class="set-1">
                             <div class="graph-2 general">
-                                <h3 class="inner-tittle two">General Form  </h3>
+                                <h3 class="inner-tittle two">综合 表单  </h3>
                                 <div class="grid-1">
                                     <div class="form-body">
                                         <form class="form-horizontal">
@@ -327,37 +327,37 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="disabledinput" class="col-sm-2 control-label">Disabled Input</label>
+                                                <label for="disabledinput" class="col-sm-2 control-label">禁止 输入</label>
                                                 <div class="col-sm-8">
                                                     <input disabled="" type="text" class="form-control1" id="disabledinput" placeholder="Disabled Input">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+                                                <label for="inputPassword" class="col-sm-2 control-label">密码</label>
                                                 <div class="col-sm-8">
                                                     <input type="password" class="form-control1" id="inputPassword" placeholder="Password">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="checkbox" class="col-sm-2 control-label">Checkbox</label>
+                                                <label for="checkbox" class="col-sm-2 control-label">复选框</label>
                                                 <div class="col-sm-8">
-                                                    <div class="checkbox-inline1"><label><input type="checkbox"> Unchecked</label></div>
-                                                    <div class="checkbox-inline1"><label><input type="checkbox" checked=""> Checked</label></div>
-                                                    <div class="checkbox-inline1"><label><input type="checkbox" disabled=""> Disabled Unchecked</label></div>
-                                                    <div class="checkbox-inline1"><label><input type="checkbox" disabled="" checked=""> Disabled Checked</label></div>
+                                                    <div class="checkbox-inline1"><label><input type="checkbox"> 未选中</label></div>
+                                                    <div class="checkbox-inline1"><label><input type="checkbox" checked=""> 选中</label></div>
+                                                    <div class="checkbox-inline1"><label><input type="checkbox" disabled=""> 禁用 未选中</label></div>
+                                                    <div class="checkbox-inline1"><label><input type="checkbox" disabled="" checked=""> 禁用 选中</label></div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="checkbox" class="col-sm-2 control-label">Checkbox Inline</label>
+                                                <label for="checkbox" class="col-sm-2 control-label">复选框 内联</label>
                                                 <div class="col-sm-8">
-                                                    <div class="checkbox-inline"><label><input type="checkbox"> Unchecked</label></div>
-                                                    <div class="checkbox-inline"><label><input type="checkbox" checked=""> Checked</label></div>
-                                                    <div class="checkbox-inline"><label><input type="checkbox" disabled=""> Disabled Unchecked</label></div>
-                                                    <div class="checkbox-inline"><label><input type="checkbox" disabled="" checked=""> Disabled Checked</label></div>
+                                                    <div class="checkbox-inline"><label><input type="checkbox"> 未选中</label></div>
+                                                    <div class="checkbox-inline"><label><input type="checkbox" checked=""> 选中</label></div>
+                                                    <div class="checkbox-inline"><label><input type="checkbox" disabled=""> 禁用 未选中</label></div>
+                                                    <div class="checkbox-inline"><label><input type="checkbox" disabled="" checked=""> 禁用 选中</label></div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="selector1" class="col-sm-2 control-label">Dropdown Select</label>
+                                                <label for="selector1" class="col-sm-2 control-label">下拉 选择</label>
                                                 <div class="col-sm-8"><select name="selector1" id="selector1" class="form-control1">
                                                     <option>Lorem ipsum dolor sit amet.</option>
                                                     <option>Dolore, ab unde modi est!</option>
@@ -366,7 +366,7 @@
                                                 </select></div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-2 control-label">Multiple Select</label>
+                                                <label class="col-sm-2 control-label">多选</label>
                                                 <div class="col-sm-8">
                                                     <select multiple="" class="form-control1">
                                                         <option>Option 1</option>
@@ -378,41 +378,41 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="txtarea1" class="col-sm-2 control-label">Textarea</label>
+                                                <label for="txtarea1" class="col-sm-2 control-label">文本域</label>
                                                 <div class="col-sm-8"><textarea name="txtarea1" id="txtarea1" cols="50" rows="4" class="form-control1"></textarea></div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="radio" class="col-sm-2 control-label">Radio</label>
+                                                <label for="radio" class="col-sm-2 control-label">单选</label>
                                                 <div class="col-sm-8">
-                                                    <div class="radio block"><label><input type="radio"> Unchecked</label></div>
-                                                    <div class="radio block"><label><input type="radio" checked=""> Checked</label></div>
-                                                    <div class="radio block"><label><input type="radio" disabled=""> Disabled Unchecked</label></div>
-                                                    <div class="radio block"><label><input type="radio" disabled="" checked=""> Disabled Checked</label></div>
+                                                    <div class="radio block"><label><input type="radio"> 未选中</label></div>
+                                                    <div class="radio block"><label><input type="radio" checked=""> 选中</label></div>
+                                                    <div class="radio block"><label><input type="radio" disabled=""> 禁用 未选中</label></div>
+                                                    <div class="radio block"><label><input type="radio" disabled="" checked=""> 禁用 选中</label></div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="radio" class="col-sm-2 control-label">Radio Inline</label>
+                                                <label for="radio" class="col-sm-2 control-label">单选 内联</label>
                                                 <div class="col-sm-8">
-                                                    <div class="radio-inline"><label><input type="radio"> Unchecked</label></div>
-                                                    <div class="radio-inline"><label><input type="radio" checked=""> Checked</label></div>
-                                                    <div class="radio-inline"><label><input type="radio" disabled=""> Disabled Unchecked</label></div>
-                                                    <div class="radio-inline"><label><input type="radio" disabled="" checked=""> Disabled Checked</label></div>
+                                                    <div class="radio-inline"><label><input type="radio"> 未选中</label></div>
+                                                    <div class="radio-inline"><label><input type="radio" checked=""> 选中</label></div>
+                                                    <div class="radio-inline"><label><input type="radio" disabled=""> 禁用 未选中</label></div>
+                                                    <div class="radio-inline"><label><input type="radio" disabled="" checked=""> 禁用 选中</label></div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="smallinput" class="col-sm-2 control-label label-input-sm">Small Input</label>
+                                                <label for="smallinput" class="col-sm-2 control-label label-input-sm">小输入框</label>
                                                 <div class="col-sm-8">
                                                     <input type="text" class="form-control1 input-sm" id="smallinput" placeholder="Small Input">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="mediuminput" class="col-sm-2 control-label">Medium Input</label>
+                                                <label for="mediuminput" class="col-sm-2 control-label">媒体输入框</label>
                                                 <div class="col-sm-8">
                                                     <input type="text" class="form-control1" id="mediuminput" placeholder="Medium Input">
                                                 </div>
                                             </div>
                                             <div class="form-group mb-n">
-                                                <label for="largeinput" class="col-sm-2 control-label label-input-lg">Large Input</label>
+                                                <label for="largeinput" class="col-sm-2 control-label label-input-lg">大输入框</label>
                                                 <div class="col-sm-8">
                                                     <input type="text" class="form-control1 input-lg" id="largeinput" placeholder="Large Input">
                                                 </div>
@@ -427,11 +427,11 @@
                         <!--/set-3-->
                         <div class="set-3">
                             <div class="graph-2 general">
-                                <h3 class="inner-tittle two">General Form  </h3>
+                                <h3 class="inner-tittle two">综合 表单  </h3>
                                 <div class="grid-1">
                                     <form class="form-horizontal">
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label">Email Address</label>
+                                            <label class="col-md-2 control-label">Email 地址</label>
                                             <div class="col-md-8">
                                                 <div class="input-group">
                                                         <span class="input-group-addon">
@@ -442,7 +442,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label">Password</label>
+                                            <label class="col-md-2 control-label">密码</label>
                                             <div class="col-md-8">
                                                 <div class="input-group">
                                                         <span class="input-group-addon">
@@ -453,7 +453,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label">Email Address</label>
+                                            <label class="col-md-2 control-label">Email 地址</label>
                                             <div class="col-md-8">
                                                 <div class="input-group input-icon right">
                                                     <span class="input-group-addon">
@@ -463,11 +463,11 @@
                                                 </div>
                                             </div>
                                             <div class="col-sm-2">
-                                                <p class="help-block">With tooltip</p>
+                                                <p class="help-block">带提示框</p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label">Password</label>
+                                            <label class="col-md-2 control-label">密码</label>
                                             <div class="col-md-8">
                                                 <div class="input-group input-icon right">
                                                         <span class="input-group-addon">
@@ -477,25 +477,25 @@
                                                 </div>
                                             </div>
                                             <div class="col-sm-2">
-                                                <p class="help-block">With tooltip</p>
+                                                <p class="help-block">带提示框</p>
                                             </div>
                                         </div>
                                         <div class="form-group has-success">
-                                            <label class="col-md-2 control-label">Input Addon Success</label>
+                                            <label class="col-md-2 control-label">输入成功</label>
                                             <div class="col-md-8">
                                                 <div class="input-group input-icon right">
-																												<span class="input-group-addon">
-																													<i class="fa fa-envelope-o"></i>
-																												</span>
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-envelope-o"></i>
+                                                    </span>
                                                     <input id="email" class="form-control1 icon" type="text" placeholder="Email Address">
                                                 </div>
                                             </div>
                                             <div class="col-sm-2">
-                                                <p class="help-block">Email is valid!</p>
+                                                <p class="help-block">Email 合法!</p>
                                             </div>
                                         </div>
                                         <div class="form-group has-error">
-                                            <label class="col-md-2 control-label">Input Addon Error</label>
+                                            <label class="col-md-2 control-label">输入错误</label>
                                             <div class="col-md-8">
                                                 <div class="input-group input-icon right">
                                                         <span class="input-group-addon">
@@ -505,11 +505,11 @@
                                                 </div>
                                             </div>
                                             <div class="col-sm-2">
-                                                <p class="help-block">Error!</p>
+                                                <p class="help-block">错误!</p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label">Checkbox Addon</label>
+                                            <label class="col-md-2 control-label">复选框 检查</label>
                                             <div class="col-md-8">
                                                 <div class="input-group">
                                                     <div class="input-group-addon"><input type="checkbox"></div>
@@ -518,7 +518,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label">Checkbox Addon</label>
+                                            <label class="col-md-2 control-label">复选框 检查</label>
                                             <div class="col-md-8">
                                                 <div class="input-group">
                                                     <input type="text" class="form-control1 icon">
@@ -527,11 +527,11 @@
                                                 </div>
                                             </div>
                                             <div class="col-sm-2">
-                                                <p class="help-block">Checkbox on right</p>
+                                                <p class="help-block">复选框正确</p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label">Radio Addon</label>
+                                            <label class="col-md-2 control-label">单选框 检查</label>
                                             <div class="col-md-8">
                                                 <div class="input-group">
                                                     <div class="input-group-addon"><input type="radio"></div>
@@ -540,7 +540,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label">Radio Addon</label>
+                                            <label class="col-md-2 control-label">单选框 检查</label>
                                             <div class="col-md-8">
                                                 <div class="input-group">
                                                     <input type="text" class="form-control1 icon">
@@ -549,11 +549,11 @@
                                                 </div>
                                             </div>
                                             <div class="col-sm-2">
-                                                <p class="help-block">Radio on right</p>
+                                                <p class="help-block">单选框 正确</p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label">Input Processing</label>
+                                            <label class="col-md-2 control-label">输入框正处理</label>
                                             <div class="col-md-8">
                                                 <div class="input-icon right spinner">
                                                     <i class="fa fa-fw fa-spin fa-spinner"></i>
@@ -561,17 +561,17 @@
                                                 </div>
                                             </div>
                                             <div class="col-sm-2">
-                                                <p class="help-block">Processing right</p>
+                                                <p class="help-block">处理正确</p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label">Static Paragraph</label>
+                                            <label class="col-md-2 control-label">静态 段落</label>
                                             <div class="col-md-8">
                                                 <p class="form-control1 m-n">email@example.com</p>
                                             </div>
                                         </div>
                                         <div class="form-group mb-n">
-                                            <label class="col-md-2 control-label">Read Only</label>
+                                            <label class="col-md-2 control-label">只读</label>
                                             <div class="col-md-8">
                                                 <input type="text" class="form-control1 icon" placeholder="Readonly" readonly="">
                                             </div>
@@ -584,11 +584,40 @@
                         <!--/set-4-->
                         <div class="set-4">
                             <div class="graph-2 general">
-                                <h3 class="inner-tittle two">General Form  </h3>
+                                <h3 class="inner-tittle two">综合 表单  </h3>
                                 <div class="grid-1">
                                     <div class="forms">
 
-                                        <div data-example-id="form-validation-states-with-icons"> <form> <div class="form-group has-success has-feedback"> <label class="control-label" for="inputSuccess2">Input with success</label> <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status"> <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span> <span id="inputSuccess2Status" class="sr-only">(success)</span> </div> <div class="form-group has-warning has-feedback"> <label class="control-label" for="inputWarning2">Input with warning</label> <input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status"> <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span> <span id="inputWarning2Status" class="sr-only">(warning)</span> </div> <div class="form-group has-error has-feedback"> <label class="control-label" for="inputError2">Input with error</label> <input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status"> <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span> <span id="inputError2Status" class="sr-only">(error)</span> </div> <div class="form-group has-success has-feedback"> <label class="control-label" for="inputGroupSuccess1">Input group with success</label> <div class="input-group"> <span class="input-group-addon">@</span> <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status"> </div> <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span> <span id="inputGroupSuccess1Status" class="sr-only">(success)</span> </div> </form> </div>
+                                        <div data-example-id="form-validation-states-with-icons">
+                                            <form>
+                                                <div class="form-group has-success has-feedback">
+                                                    <label class="control-label" for="inputSuccess2">输入正确框</label>
+                                                    <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
+                                                    <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                                                    <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                                               </div>
+                                               <div class="form-group has-warning has-feedback">
+                                                   <label class="control-label" for="inputWarning2">输入警告框</label>
+                                                   <input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status">
+                                                   <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
+                                                   <span id="inputWarning2Status" class="sr-only">(warning)</span>
+                                               </div>
+                                               <div class="form-group has-error has-feedback">
+                                                   <label class="control-label" for="inputError2">输入错误框</label>
+                                                   <input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">
+                                                   <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                                                   <span id="inputError2Status" class="sr-only">(error)</span>
+                                               </div> <div class="form-group has-success has-feedback">
+                                               <label class="control-label" for="inputGroupSuccess1">输入组成功</label>
+                                                   <div class="input-group">
+                                                       <span class="input-group-addon">@</span>
+                                                       <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
+                                                   </div>
+                                                <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                                                <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
+                                            </div>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

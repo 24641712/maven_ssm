@@ -180,7 +180,7 @@
                                 <ul class="dropdown-menu two">
                                     <li>
                                         <div class="notification_header">
-                                            <h3>你有5条新通知</h3>
+                                            <h3>你有5条系统通知</h3>
                                         </div>
                                     </li>
                                     <li><a href="#">
@@ -710,11 +710,11 @@
                         </div>
                         <div class="area">
                             <div class="col-md-6 chrt-two area">
-                                <h3 class="sub-tittle">多线图t</h3>
-                                <div style="area">
+                                <h3 class="sub-tittle">多线图</h3>
+                                <div style="area:">
                                     <canvas id="canvas" style="width:100%;height:100%"></canvas>
                                 </div>
-                                <button id="randomizeData">Randomize Data</button>
+                                <button id="randomizeData">随机数据</button>
                                 <script>
                                     var randomScalingFactor = function() {
                                         return Math.round(Math.random() * 100 * (Math.random() > 0.5 ? -1 : 1));
@@ -952,8 +952,11 @@
                             </div>
                             <div class="clearfix"></div>
                         </div>
-                        <!--//weather-charts-->
+
+
+                        <!--天气和简易时钟两个模块模块-->
                         <div class="graph-visualization">
+                            <!--模块一：天气预报-->
                             <div class="col-md-6 map-1">
                                 <h3 class="sub-tittle">天气 </h3>
                                 <div class="weather">
@@ -988,7 +991,7 @@
                                             </p>
                                         </div>
                                         <div class="weather-top-right">
-                                            <p><i class="fa fa-map-marker"></i>Location</p>
+                                            <p><i class="fa fa-map-marker"></i>位置</p>
                                             <label>Lorem ipsum</label>
                                         </div>
                                         <div class="clearfix"> </div>
@@ -996,7 +999,7 @@
                                     <div class="weather-bottom">
                                         <div class="weather-bottom1">
                                             <div class="weather-head">
-                                                <h4>Cloudy</h4>
+                                                <h4>多云</h4>
                                                 <figure class="icons">
                                                     <canvas id="cloudy" width="40" height="40"></canvas>
                                                 </figure>
@@ -1016,13 +1019,13 @@
                                                 </script>
                                                 <h6>20°</h6>
                                                 <div class="bottom-head">
-                                                    <p>Monday</p>
+                                                    <p>星期一</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="weather-bottom1 ">
                                             <div class="weather-head">
-                                                <h4>Sunny</h4>
+                                                <h4>晴天</h4>
                                                 <figure class="icons">
                                                     <canvas id="clear-day" width="40" height="40">
                                                     </canvas>
@@ -1044,13 +1047,13 @@
                                                 </script>
                                                 <h6>37°</h6>
                                                 <div class="bottom-head">
-                                                    <p>Tuesday</p>
+                                                    <p>星期二</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="weather-bottom1">
                                             <div class="weather-head">
-                                                <h4>Rainy</h4>
+                                                <h4>小雨</h4>
                                                 <figure class="icons">
                                                     <canvas id="sleet" width="40" height="40">
                                                     </canvas>
@@ -1072,13 +1075,13 @@
 
                                                 <h6>7°</h6>
                                                 <div class="bottom-head">
-                                                    <p>Wednesday</p>
+                                                    <p>星期三</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="weather-bottom1 ">
                                             <div class="weather-head">
-                                                <h4>Snowy</h4>
+                                                <h4>小雪</h4>
                                                 <figure class="icons">
                                                     <canvas id="snow" width="40" height="40">
                                                     </canvas>
@@ -1099,7 +1102,7 @@
                                                 </script>
                                                 <h6>-10°</h6>
                                                 <div class="bottom-head">
-                                                    <p>Thursday</p>
+                                                    <p>星期四</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1109,6 +1112,8 @@
                                 </div>
 
                             </div>
+
+                            <!--模块二：简易时钟-->
                             <div class="col-md-6 map-2">
                                 <div class="profile-nav alt">
                                     <section class="panel">
@@ -1125,25 +1130,25 @@
                                             <li>
                                                 <a href="#" class="active">
                                                     <img src="./static/images/time.png" alt="">
-                                                    <span>Clock</span>
+                                                    <span>时钟</span>
                                                 </a>
                                             </li>
                                             <li>
                                                 <a href="#">
                                                     <img src="./static/images/alarm.png" alt="">
-                                                    <span>Alarm</span>
+                                                    <span>闹铃</span>
                                                 </a>
                                             </li>
                                             <li>
                                                 <a href="#">
                                                     <img src="./static/images/watch.png" alt="">
-                                                    <span>Stop watch</span>
+                                                    <span>秒表</span>
                                                 </a>
                                             </li>
                                             <li>
                                                 <a href="#">
                                                     <img src="${pageContext.request.contextPath}/static/images/timer.png" alt="">
-                                                    <span>Timer</span>
+                                                    <span>计时器</span>
                                                 </a>
                                             </li>
                                         </ul>
@@ -1155,17 +1160,17 @@
                             <div class="clearfix"> </div>
                         </div>
 
-                        <!--//charts-->
+                        <!--车速里程表模块-->
                         <div class="area-charts">
                             <div class="col-md-6 panel-chrt">
                                 <h3 class="sub-tittle dyna">动态车速里程表 </h3>
                                 <div id="wrapper">
                                     <div id="left">
                                         <div>
-                                            <label for='miles'>Miles:</label> <input type="text" name="miles" id="miles" />
+                                            <label for='miles'>英里:</label> <input type="text" name="miles" id="miles" />
                                         </div>
                                         <div>
-                                            <label for='kilometers'>Kilometers:</label> <input type="text" name="kilometers" id="kilometers" />
+                                            <label for='kilometers'>公里:</label> <input type="text" name="kilometers" id="kilometers" />
                                         </div>
                                         <p id="errmsg"></p>
                                     </div>
@@ -1178,6 +1183,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--活动时间线模块-->
                             <div class="col-md-6 tini-time-line">
                                 <h3 class="sub-tittle">时间线 </h3>
                                 <ul class="timeline">
@@ -1185,10 +1191,10 @@
                                         <div class="timeline-badge info"><i class="fa fa-smile-o"></i></div>
                                         <div class="timeline-panel">
                                             <div class="timeline-heading">
-                                                <h4 class="timeline-title">Title</h4>
+                                                <h4 class="timeline-title">早晨</h4>
                                             </div>
                                             <div class="timeline-body">
-                                                <p>Description...</p>
+                                                <p>7:30-8:30  准时起床到操场跑步锻炼身体...</p>
                                             </div>
                                         </div>
                                     </li>
@@ -1197,24 +1203,22 @@
                                         <div class="timeline-badge primary"><i class="fa fa-star-o"></i></div>
                                         <div class="timeline-panel">
                                             <div class="timeline-heading">
-                                                <h4 class="timeline-title">Title</h4>
+                                                <h4 class="timeline-title">中午</h4>
                                             </div>
                                             <div class="timeline-body">
-                                                <p>Description...</p>
+                                                <p>9:30-11:30  上班时间,完成领导交给的任务...</p>
                                             </div>
                                         </div>
                                     </li>
-
-
 
                                     <li>
                                         <div class="timeline-badge danger"><i class="fa fa-times-circle-o"></i></div>
                                         <div class="timeline-panel">
                                             <div class="timeline-heading">
-                                                <h4 class="timeline-title">Title</h4>
+                                                <h4 class="timeline-title">下午</h4>
                                             </div>
                                             <div class="timeline-body">
-                                                <p>Description...</p>
+                                                <p>13:30-16:30  上班时间，间隙喝会下午茶，体验一下人生的乐趣...</p>
                                             </div>
                                         </div>
                                     </li>
@@ -1223,10 +1227,10 @@
                                         <div class="timeline-badge success"><i class="fa fa-check-circle-o"></i></div>
                                         <div class="timeline-panel">
                                             <div class="timeline-heading">
-                                                <h4 class="timeline-title">Title</h4>
+                                                <h4 class="timeline-title">晚上</h4>
                                             </div>
                                             <div class="timeline-body">
-                                                <p>Description...</p>
+                                                <p>18:30-20:30 逛公园遛狗，亦或参加朋友聚会...</p>
                                             </div>
                                         </div>
                                     </li>
@@ -1234,11 +1238,14 @@
                             </div>
                             <div class="clearfix"></div>
                         </div>
+
+
                         <!--/bottom-grids-->
                         <div class="bottom-grids">
                             <div class="dev-table">
-                                <div class="col-md-4 dev-col">
 
+                                <!--服务器使用情况模块-->
+                                <div class="col-md-4 dev-col">
                                     <div class="dev-widget dev-widget-transparent">
                                         <h2 class="inner one">服务器使用</h2>
                                         <p>今天服务器使用率：</p>
@@ -1248,40 +1255,38 @@
                                         </div>
                                         <p>我们建议您将今天的计划改为 <strong>Pro</strong>.点击获取更多信息.</p>
 
-                                        <a href="#" class="dev-drop">Take a closer look <span class="fa fa-angle-right pull-right"></span></a>
+                                        <a href="#" class="dev-drop">查看明细 <span class="fa fa-angle-right pull-right"></span></a>
                                     </div>
-
                                 </div>
-                                <div class="col-md-4 dev-col mid">
 
+                                <!--今日收益情况模块-->
+                                <div class="col-md-4 dev-col mid">
                                     <div class="dev-widget dev-widget-transparent dev-widget-success">
                                         <h3 class="inner">今日收益</h3>
-                                        <p>This is Today earnings per last year</p>
+                                        <p>这是去年的每股收益</p>
                                         <div class="dev-stat">$<span class="counter">75,332</span></div>
                                         <div class="progress progress-bar-xs">
                                             <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 79%;"></div>
                                         </div>
                                         <p>我们很高兴地通知您，您成为一个精英客户，您可以得到一些定制的糖。</p>
-
-                                        <a href="#" class="dev-drop">Take a closer look <span class="fa fa-angle-right pull-right"></span></a>
+                                        <a href="#" class="dev-drop">查看明细 <span class="fa fa-angle-right pull-right"></span></a>
                                     </div>
-
                                 </div>
-                                <div class="col-md-4 dev-col">
 
+                                <!--收支平衡情况模块-->
+                                <div class="col-md-4 dev-col">
                                     <div class="dev-widget dev-widget-transparent dev-widget-danger">
                                         <h3 class="inner">收支平衡</h3>
-                                        <p>All your earnings for this time</p>
+                                        <p>你这次的所有收益</p>
                                         <div class="dev-stat">$<span class="counter">5,321</span></div>
                                         <div class="progress progress-bar-xs">
                                             <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
                                         </div>
                                         <p>您可以在每个月底收回这笔钱。您也可以把它花在我们的市场上。</p>
-
-                                        <a href="#" class="dev-drop">Take a closer look <span class="fa fa-angle-right pull-right"></span></a>
+                                        <a href="#" class="dev-drop">查看明细 <span class="fa fa-angle-right pull-right"></span></a>
                                     </div>
-
                                 </div>
+
                                 <div class="clearfix"></div>
 
                             </div>

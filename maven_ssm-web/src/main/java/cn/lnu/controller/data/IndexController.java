@@ -1,4 +1,4 @@
-package cn.lnu.controller;
+package cn.lnu.controller.data;
 
 import cn.lnu.entity.data.TableData;
 import cn.lnu.service.data.IndexService;

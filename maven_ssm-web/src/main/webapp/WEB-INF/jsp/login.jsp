@@ -55,7 +55,7 @@
 
                 <div class="new">
                     <p><label class="checkbox11"><input type="checkbox" name="checkbox"><i> </i>Forgot Password ?</label></p>
-                    <p class="sign">Do not have an account ? <a href="${pageContext.request.contextPath}/user/register.do">Sign Up</a></p>
+                    <p class="sign">Do not have an account ? <a href="${pageContext.request.contextPath}/user/loginCheck.do">Sign Up</a></p>
                     <div class="clearfix"></div>
                 </div>
             </form>
@@ -72,7 +72,7 @@
 <!--footer section start-->
 <div class="footer">
     <div class="error-btn">
-        <a class="read fourth" href="${pageContext.request.contextPath}/index/index.do">返回首页</a>
+        <a class="read fourth" href="${pageContext.request.contextPath}/user/register.do">返回首页</a>
     </div>
     <p>Copyright &copy; 2016.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
 </div>

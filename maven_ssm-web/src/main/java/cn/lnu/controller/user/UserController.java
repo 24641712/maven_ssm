@@ -1,4 +1,4 @@
-package cn.lnu.controller;
+package cn.lnu.controller.user;
 
 import cn.lnu.entity.user.User;
 import cn.lnu.service.user.UserService;
@@ -15,10 +15,11 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
- * @author ChengChuangLiang
+ * @author CCL
  * @date 2018/7/21
  */
 @Controller
@@ -40,36 +41,28 @@ public class UserController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "/loginCheck",method = RequestMethod.POST,produces =
-            "application/json;charset=UTF-8")
-    public ModelAndView returnLoginCheck(HttpServletRequest request,@RequestBody User user){
+    @RequestMapping(value = "/loginCheck",method = RequestMethod.POST)
+    public String returnLoginCheck(String username,String password,HttpServletRequest request){
 
-        System.out.println(user.toString());
+        User user = new User(username,password);
 
         HttpSession session = request.getSession();
 
-        session.setAttribute("user",user);
+        session.setAttribute("username",username);
 
         User resultUser = userService.login(user);
-
-        Map<String,String> map = new HashMap<String,String>();
 
         if(resultUser != null){
 
             System.out.println("用户登录成功");
 
-            map.put("result","true");
+            return "true";
 
         }else{
-
             System.out.println("用户不存在");
 
-            map.put("result","false");
-
+            return "false";
         }
-
-         return new ModelAndView(new MappingJackson2JsonView(),map);
-
     }
 
     @RequestMapping("/register")

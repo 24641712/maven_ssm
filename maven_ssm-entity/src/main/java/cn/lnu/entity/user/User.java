@@ -1,7 +1,7 @@
 package cn.lnu.entity.user;
 
 /**
- * @author ChengChuangLiang
+ * @author CCL
  * @date 2018/7/21
  */
 public class User {
@@ -11,6 +11,14 @@ public class User {
     private String username;//用户名
 
     private String password;//用户密码
+
+    public User() {
+    }
+
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
 
     public int getId() {
         return id;

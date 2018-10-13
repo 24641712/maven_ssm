@@ -25,10 +25,10 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
         }
         HttpSession session = request.getSession();
         if(session.getAttribute("username") == null){
-            System.out.println("用户状态：0");
+            System.out.println("用户状态：未登录");
             throw new WebAuthException();
         }else {
-            System.out.println("用户状态：1");
+            System.out.println("用户状态：已登录");
             return true;
         }
     }
