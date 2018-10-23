@@ -8,7 +8,7 @@ $(function () {
             data:regInfo,
             type:"POST",
             dataType:"text",
-            url:"./user/loginCheck.do",
+            url:"./loginCheck.do",
             success:function (responseData) {
                 if (responseData == "true"){
                     alert("登录成功");

@@ -8,7 +8,8 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 public class LoginInterceptor extends HandlerInterceptorAdapter {
-   private List<String> excludeUrls;
+
+    private List<String> excludeUrls;
 
     public void setExcludeUrls(List<String> excludeUrls) {
         this.excludeUrls = excludeUrls;
@@ -23,7 +24,9 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
                 return  true;
             }
         }
-        HttpSession session = request.getSession();
+        HttpSession session =request.getSession();
+        System.out.println(session.getLastAccessedTime());
+
         if(session.getAttribute("username") == null){
             System.out.println("用户状态：未登录");
             throw new WebAuthException();

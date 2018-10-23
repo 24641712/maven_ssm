@@ -4,19 +4,13 @@ import cn.lnu.entity.user.User;
 import cn.lnu.service.user.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * @author CCL
@@ -36,7 +30,7 @@ public class UserController {
 
         System.out.println("Login(登录)");
 
-        return "/login";
+        return "jspLogin";
 
     }
 
@@ -86,6 +80,22 @@ public class UserController {
         return "/sign";
 
     }
+
+    @ResponseBody
+    @RequestMapping(value = "/loginout",method = RequestMethod.POST)
+    public static String returnLoginOut(HttpServletRequest request){
+        HttpSession session = request.getSession();
+        session.removeAttribute("username");
+        System.out.println("session="+session.getAttribute("username"));
+        if(session.getAttribute("username")==null){
+            System.out.println("ok");
+        }else {
+            System.out.println("no ok");
+        }
+        return "ok";
+    }
+
+
 
 
 

@@ -48,8 +48,7 @@
 
 
     <!-- 启动SpringMVC的注解功能，完成请求和注解POJO的映射 -->
-    <bean
-            class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
         <property name="messageConverters">
             <list>
                 <ref bean="mappingJacksonHttpMessageConverter" />	<!-- JSON转换器 -->
@@ -66,9 +65,7 @@
 
 
     <!--
-       自定义拦截器
-       防止越过登录
-       通过地址直接访问
+       自定义拦截器 防止越过登录页面通过地址直接访问
     -->
     <mvc:interceptors>
         <mvc:interceptor>
@@ -76,7 +73,7 @@
             <bean class="cn.lnu.interceptor.LoginInterceptor">
                 <property name="excludeUrls">
                     <list>
-                        <value>/index/index.do</value>
+                        <!--<value>/index/index.do</value>-->
                         <value>/user/Login.do</value>
                         <value>/user/loginCheck.do</value>
                         <value>/user/register.do</value>

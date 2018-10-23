@@ -37,6 +37,15 @@
     <script src="${pageContext.request.contextPath}/static/js/skycons.js"></script>
 
     <script src="${pageContext.request.contextPath}/static/js/jquery.easydropdown.js"></script>
+    <script type="text/javascript">
+        function loginout1() {
+            alert("hello");
+        }
+
+
+
+
+    </script>
 
     <!--//skycons-icons-->
 
@@ -1323,7 +1332,7 @@
             <ul>
                 <li><a class="tooltips" href="${pageContext.request.contextPath}/index/profile.do"><span>简介</span><i class="lnr lnr-user"></i></a></li>
                 <li><a class="tooltips" href="index.html"><span>设置</span><i class="lnr lnr-cog"></i></a></li>
-                <li><a class="tooltips" href="index.html"><span>退出</span><i class="lnr lnr-power-switch"></i></a></li>
+                <li><a class="tooltips" href="#" id="loginOut"><span>退出</span><i class="lnr lnr-power-switch"></i></a></li>
             </ul>
         </div>
         <!--//down-->
@@ -1423,13 +1432,7 @@
 
 <!-- Bootstrap Core JavaScript -->
 <script src="${pageContext.request.contextPath}/static/js/bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/test.js"></script>
-
-
-
-
-
-
+<script src="${pageContext.request.contextPath}/static/js/data/index.js"></script>
 
 </body>
 </html>

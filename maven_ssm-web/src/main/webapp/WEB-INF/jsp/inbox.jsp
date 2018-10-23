@@ -296,22 +296,22 @@
 													</span>
                             </div><!-- Input Group -->
                         </form>
-                        <h2>Compose</h2>
+                        <h2>撰写</h2>
                         <nav class="nav-sidebar">
                             <ul class="nav tabs">
-                                <li class="active"><a href="#tab1" data-toggle="tab"><i class="fa fa-inbox"></i>Inbox <span>9</span><div class="clearfix"></div></a></li>
-                                <li class=""><a href="#tab2" data-toggle="tab"><i class="fa fa-share-square-o"></i> Sent</a></li>
-                                <li class=""><a href="#tab3" data-toggle="tab"><i class="fa fa-star-o"></i>Important</a></li>
-                                <li class=""><a href="#tab4" data-toggle="tab"><i class="fa fa-pencil-square-o"></i>Draft <span>6</span><div class="clearfix"></div></a></li>
-                                <li class=""><a href="#tab5" data-toggle="tab"><i class="fa fa-trash-o"></i>Delete</a></li>
+                                <li class="active"><a href="#tab1" data-toggle="tab"><i class="fa fa-inbox"></i>写邮件 <span>9</span><div class="clearfix"></div></a></li>
+                                <li class=""><a href="#tab2" data-toggle="tab"><i class="fa fa-share-square-o"></i> 发邮件</a></li>
+                                <li class=""><a href="#tab3" data-toggle="tab"><i class="fa fa-star-o"></i>重要邮件</a></li>
+                                <li class=""><a href="#tab4" data-toggle="tab"><i class="fa fa-pencil-square-o"></i>草稿 <span>6</span><div class="clearfix"></div></a></li>
+                                <li class=""><a href="#tab5" data-toggle="tab"><i class="fa fa-trash-o"></i>删除</a></li>
                             </ul>
                         </nav>
                         <div class="content-box">
                             <ul>
-                                <li><span>Folder</span></li>
-                                <li><a href="#"><i class="fa fa-folder-o"></i>Tasks</a></li>
-                                <li><a href="#"><i class="fa fa-folder-o"></i>Jobs</a></li>
-                                <li><a href="#"><i class="fa fa-folder-o"></i>Client</a></li>
+                                <li><span>文件夹</span></li>
+                                <li><a href="#"><i class="fa fa-folder-o"></i>任务</a></li>
+                                <li><a href="#"><i class="fa fa-folder-o"></i>工作</a></li>
+                                <li><a href="#"><i class="fa fa-folder-o"></i>顾客</a></li>
                             </ul>
                         </div>
 
@@ -328,26 +328,26 @@
                                                 <div class="btn-group">
                                                     <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-folder"></i> <span class="caret"></span></a>
                                                     <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                                                        <li><a href="#">Social</a></li>
-                                                        <li><a href="#">Forums</a></li>
-                                                        <li><a href="#">Updates</a></li>
+                                                        <li><a href="#">社会</a></li>
+                                                        <li><a href="#">论坛</a></li>
+                                                        <li><a href="#">更新</a></li>
 
-                                                        <li><a href="#">Spam</a></li>
-                                                        <li><a href="#">Trash</a></li>
+                                                        <li><a href="#">垃圾邮件</a></li>
+                                                        <li><a href="#">垃圾箱</a></li>
 
-                                                        <li><a href="#">New</a></li>
+                                                        <li><a href="#">最新</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="btn-group">
                                                     <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-tags"></i> <span class="caret"></span></a>
                                                     <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                                                        <li><a href="#">Work</a></li>
-                                                        <li><a href="#">Family</a></li>
-                                                        <li><a href="#">Social</a></li>
+                                                        <li><a href="#">工作</a></li>
+                                                        <li><a href="#">家庭</a></li>
+                                                        <li><a href="#">社会</a></li>
 
-                                                        <li><a href="#">Primary</a></li>
-                                                        <li><a href="#">Promotions</a></li>
-                                                        <li><a href="#">Forums</a></li>
+                                                        <li><a href="#">主要</a></li>
+                                                        <li><a href="#">推广</a></li>
+                                                        <li><a href="#">论坛</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
