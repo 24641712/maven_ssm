@@ -1,5 +1,6 @@
 package cn.lnu.controller.user;
 
+import cn.lnu.entity.MD5.MD5Util;
 import cn.lnu.entity.user.User;
 import cn.lnu.service.user.UserService;
 import org.springframework.stereotype.Controller;
@@ -40,6 +41,8 @@ public class UserController {
 
         User user = new User(username,password);
 
+        System.out.println("用户密码是："+MD5Util.getMd5("123456"));
+
         HttpSession session = request.getSession();
 
         session.setAttribute("username",username);
@@ -47,7 +50,7 @@ public class UserController {
         User resultUser = userService.login(user);
 
         if(resultUser != null){
-
+            System.out.println(resultUser.toString());
             System.out.println("用户登录成功");
 
             return "true";
