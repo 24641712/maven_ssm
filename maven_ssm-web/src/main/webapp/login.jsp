@@ -83,6 +83,14 @@
 <script src="${pageContext.request.contextPath}/static/js/scripts.js"></script>
 <!-- Bootstrap Core JavaScript -->
 <script src="${pageContext.request.contextPath}/static/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $("body").keydown(function () {
+        if(event.keyCode == "13"){
+            $("#submit").click();
+        }
+    });
+
+</script>
 
 </body>
 </html>

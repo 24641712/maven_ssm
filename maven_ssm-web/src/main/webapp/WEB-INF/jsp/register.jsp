@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>注册</title>
+    <title>用户注册</title>
     <link rel="shortcut icon" href="../../static/images/facecat.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -38,14 +38,14 @@
     <div class="error-top">
         <h2 class="inner-tittle page">Augment</h2>
         <div class="login">
-            <h3 class="inner-tittle t-inner">Register</h3>
+            <h3 class="inner-tittle t-inner">注册</h3>
             <form>
-                <input type="text" class="text" value="E-mail address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-mail address';}" >
+                <input type="text" class="text" value="用户名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-mail address';}" >
                 <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
                 <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
                 <div class="sign-up">
-                    <input type="reset" value="Reset">
-                    <input type="submit" onclick="myFunction()" value="Register">
+                    <input type="reset" value="重置">
+                    <input type="submit" onclick="myFunction()" value="注册">
 
                 </div>
                 <div class="clearfix"></div>
@@ -77,6 +77,14 @@
 <script src="${pageContext.request.contextPath}/static/js/scripts.js"></script>
 <!-- Bootstrap Core JavaScript -->
 <script src="${pageContext.request.contextPath}/static/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  $("body").keydown(function () {
+      if(event.keyCode == "13"){
+          alert("你按下了Enter键");
+      }
+  });
+
+</script>
 
 </body>
 </html>

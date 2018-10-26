@@ -11,10 +11,9 @@ $(function () {
             url:"./user/loginCheck.do",
             success:function (responseData) {
                 if (responseData == "true"){
-                    alert("登录成功");
                     window.location.href = successurl;
                 }else {
-                    alert("登录失败");
+                    alert("用户名或密码错误");
                 }
             },
             error:function (XMLHttpRequest,textStatus,errorThrown) {
