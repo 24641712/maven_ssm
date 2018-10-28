@@ -22,13 +22,38 @@
     <!--自动将Controller层注入-->
     <context:component-scan base-package="cn.lnu.dao"/>
 
-    <!--配置dataSource数据源-->
-    <bean id="dataSource"
-    class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver "/>
-        <property name="url" value="jdbc:mysql://127.0.0.1:3306/testweb?useUnicode=true&amp;characterEncoding=utf-8"/>
-        <property name="username" value="root"/>
-        <property name="password" value="123456"/>
+    <!--&lt;!&ndash;配置dataSource数据源&ndash;&gt;-->
+    <!--<bean id="dataSource"-->
+    <!--class="org.springframework.jdbc.datasource.DriverManagerDataSource">-->
+        <!--<property name="driverClassName" value="com.mysql.jdbc.Driver "/>-->
+        <!--<property name="url" value="jdbc:mysql://127.0.0.1:3306/testweb?useUnicode=true&amp;characterEncoding=utf-8"/>-->
+        <!--<property name="username" value="root"/>-->
+        <!--<property name="password" value="123456"/>-->
+    <!--</bean>-->
+    <!--读取配置文件-->
+    <context:property-placeholder location="classpath:config/*.properties"/>
+
+    <!--配置数据源-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+            destroy-method="close">
+        <!--数据库驱动-->
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <!--连接数据库的url-->
+        <property name="url" value="${jdbc.url}"/>
+        <!--连接数据库的用户名-->
+        <property name="username" value="${jdbc.username}"/>
+        <!--连接数据库的密码-->
+        <property name="password" value="${jdbc.password}"/>
+        <!--初始化连接数-->
+        <property name="initialSize" value="${jdbc.initialSize}"/>
+        <!--最大连接数-->
+        <property name="maxActive" value="${jdbc.maxActive}"/>
+        <!--最大空闲数-->
+        <property name="maxIdle" value="${jdbc.maxIdle}"/>
+        <!--最小空闲数-->
+        <property name="minIdle" value="${jdbc.minIdle}"/>
+        <!--定义最长等待时间-->
+        <property name="maxWait" value="${jdbc.maxWait}"/>
     </bean>
 
     <!--使用jdbcTemplate连接数据源-->

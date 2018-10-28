@@ -21,6 +21,7 @@ import javax.servlet.http.HttpSession;
 @RequestMapping("/user")
 public class UserController {
 
+    //依赖注入
     @Resource
     private UserService userService;
 
@@ -97,12 +98,5 @@ public class UserController {
         }
         return "ok";
     }
-
-
-
-
-
-
-
 
 }

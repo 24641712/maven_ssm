@@ -40,9 +40,9 @@
         <div class="login">
             <h3 class="inner-tittle t-inner">注册</h3>
             <form>
-                <input type="text" class="text" value="用户名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-mail address';}" >
-                <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
-                <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+                <input type="text" class="text" value="用户名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '注册';}" >
+                <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '密码';}">
+                <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '密码';}">
                 <div class="sign-up">
                     <input type="reset" value="重置">
                     <input type="submit" onclick="myFunction()" value="注册">
