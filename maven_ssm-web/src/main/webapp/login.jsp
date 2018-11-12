@@ -46,16 +46,16 @@
                 </ul>
             </div>
             <form>
-                <input type="text" id="username" class="text" value="E-mail address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-mail address';}" >
-                <input type="password" id="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+                <input type="text" id="username" class="text" value="1" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '1';}" >
+                <input type="password" id="password" value="1" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '1';}">
                 <div class="submit">
-                    <input type="submit" id="submit" value="Login" >
+                    <input type="submit" id="submit" value="登录" >
                 </div>
                 <div class="clearfix"></div>
 
                 <div class="new">
-                    <p><label class="checkbox11"><input type="checkbox" name="checkbox"><i> </i>Forgot Password ?</label></p>
-                    <p class="sign">Do not have an account ? <a href="${pageContext.request.contextPath}/user/loginCheck.do">Sign Up</a></p>
+                    <p><label class="checkbox11"><input type="checkbox" name="checkbox"><i> </i>忘记密码 ?</label></p>
+                    <p class="sign"> <a href="${pageContext.request.contextPath}/user/register.do">注册账户 ?</a></p>
                     <div class="clearfix"></div>
                 </div>
             </form>

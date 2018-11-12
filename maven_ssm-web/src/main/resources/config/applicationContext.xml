@@ -22,16 +22,12 @@
     <!--自动将Controller层注入-->
     <context:component-scan base-package="cn.lnu.dao"/>
 
-    <!--&lt;!&ndash;配置dataSource数据源&ndash;&gt;-->
-    <!--<bean id="dataSource"-->
-    <!--class="org.springframework.jdbc.datasource.DriverManagerDataSource">-->
-        <!--<property name="driverClassName" value="com.mysql.jdbc.Driver "/>-->
-        <!--<property name="url" value="jdbc:mysql://127.0.0.1:3306/testweb?useUnicode=true&amp;characterEncoding=utf-8"/>-->
-        <!--<property name="username" value="root"/>-->
-        <!--<property name="password" value="123456"/>-->
-    <!--</bean>-->
-    <!--读取配置文件-->
-    <context:property-placeholder location="classpath:config/*.properties"/>
+    <!--读取邮件配置文件-->
+    <context:property-placeholder location="classpath:config/mail.properties"
+                                  ignore-unresolvable="true"/>
+
+    <!--读取jdbc配置文件-->
+    <context:property-placeholder location="classpath:config/jdbc.properties"/>
 
     <!--配置数据源-->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"

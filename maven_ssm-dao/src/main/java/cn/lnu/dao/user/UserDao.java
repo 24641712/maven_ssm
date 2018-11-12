@@ -12,4 +12,7 @@ public interface UserDao {
     public User login(User user);
 
     public List<User> find();
+
+    public int register(User user);
+
 }

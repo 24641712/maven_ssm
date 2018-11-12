@@ -34,5 +34,15 @@ public class UserServiceImpl implements UserService{
         return list;
     }
 
+    @Override
+    public int register(User user) {
+
+        System.out.println("register:"+user.toString());
+
+        return userDao.register(user);
+
+    }
+
+
 
 }

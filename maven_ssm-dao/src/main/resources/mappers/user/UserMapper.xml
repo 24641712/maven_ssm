@@ -14,8 +14,24 @@
         select * from t_user where username=#{username} and password=#{password}
     </select>
 
+    <!--查找所有用户-->
   <select id="find" resultMap="UserResult">
       select * from t_user;
   </select>
+
+    <!--&lt;!&ndash;实现用户注册功能&ndash;&gt;-->
+    <!--<insert id="register" useGeneratedKeys="true" keyProperty="id">-->
+       <!--insert into t_user (username,password)-->
+       <!--values(#{username},#{password});-->
+    <!--</insert>-->
+
+    <!--实现用户注册功能-->
+    <insert id="register" parameterType="User" useGeneratedKeys="true" keyProperty="id">
+       insert into t_user (id,username,password)
+       values(null,#{username},#{password});
+    </insert>
+
+
+
 
 </mapper>

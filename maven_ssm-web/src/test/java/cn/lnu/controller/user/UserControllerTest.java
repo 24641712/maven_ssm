@@ -18,21 +18,22 @@ import static org.junit.Assert.*;
  * description:
  */
 
-//@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath*:config/applicationContext.xml"})
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {"classpath*:config/applicationContext.xml",
+                              "classpath:config/spring-mvc.xml"})
 public class UserControllerTest {
 
-    @Autowired
+    @Resource
     private UserService userService;
 
     @Test
-    public void returnLoginCheck() {
+    public void returnRegister() {
 
-        User user = new User("1","1");
+        User user = new User("华英雄","123456");
 
-        User resultUser = userService.login(user);
+        int result = userService.register(user);
 
-        System.out.println(resultUser.toString());
+        System.out.println("test:"+result);
 
     }
 

@@ -66,20 +66,12 @@ public class UserController {
     @RequestMapping("/register")
     public String returnRegister(Model model){
 
-        model.addAttribute("message","我要注册");
-
-        System.out.println("注册");
-
         return "/register";
 
     }
 
     @RequestMapping("/sign")
     public String returnSign(Model model){
-
-        model.addAttribute("message","我要登录");
-
-        System.out.println("sign（登录）");
 
         return "/sign";
 
@@ -98,5 +90,34 @@ public class UserController {
         }
         return "ok";
     }
+
+//  用ajax实现注册功能
+@ResponseBody
+@RequestMapping(value = "/userRegister",method = RequestMethod.POST)
+public String returnRegisterCheck(String username,String password,HttpServletRequest request){
+
+    System.out.println("用户注册");
+
+    password = MD5Util.getMd5("123456");
+
+    User user = new User(username,password);
+
+    int result = userService.register(user);
+
+    System.out.println("result:"+result);
+
+    if(result == 1){
+
+        System.out.println("用户注册成功");
+
+        return "true";
+
+    }else{
+
+        System.out.println("用户不存在");
+
+        return "false";
+    }
+}
 
 }

@@ -15,5 +15,7 @@ public interface UserService {
 
     public List<User> find();
 
+    public int register(User user);
+
 
 }

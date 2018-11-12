@@ -14,6 +14,7 @@
         <module>maven_ssm-web</module>
         <module>maven_ssm-entity</module>
         <module>maven_ssm-serviceimpl</module>
+        <module>maven_ssm-utils</module>
     </modules>
     <properties>
         <spring.version>4.0.2.RELEASE</spring.version>
@@ -233,6 +234,22 @@
             <artifactId>spring-orm</artifactId>
             <version>${spring.version}</version>
         </dependency>
+
+        <!--spring支持-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>5.0.0.RELEASE</version>
+        </dependency>
+        <!--邮件发送-->
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+
+
+
 
     </dependencies>
 

@@ -73,10 +73,11 @@
             <bean class="cn.lnu.interceptor.LoginInterceptor">
                 <property name="excludeUrls">
                     <list>
-                        <!--<value>/index/index.do</value>-->
+                        <value>/index/index.do</value>
                         <value>/user/Login.do</value>
                         <value>/user/loginCheck.do</value>
                         <value>/user/register.do</value>
+                        <value>/user/userRegister.do</value>
                     </list>
                 </property>
             </bean>

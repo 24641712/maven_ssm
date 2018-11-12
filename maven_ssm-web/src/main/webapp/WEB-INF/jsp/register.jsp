@@ -1,8 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
-  Date: 2018/7/2 0002
-  Time: 下午 3:31
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -35,24 +33,25 @@
 <div class="error_page">
     <!--/login-top-->
 
-    <div class="error-top">
-        <h2 class="inner-tittle page">Augment</h2>
-        <div class="login">
-            <h3 class="inner-tittle t-inner">注册</h3>
+    <div class="error-top" style="height: 550px;width: 550px;margin-left: -100px;margin-top: 40px">
+        <div class="login" style="height: 340px;width: 400px;margin-left: 50px">
+            <h3 class="inner-tittle t-inner">Augment</h3>
             <form>
-                <input type="text" class="text" value="用户名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '注册';}" >
-                <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '密码';}">
-                <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '密码';}">
+                <input type="text" id="username" class="text" value="用户名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}" >
+                <input type="password" id="password1" value="1" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '1';}">
+                <input type="password" id="password2" value="1" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '1';}">
+                <input type="text" id="phone" class="text" value="电话" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '电话';}" >
+                <input type="text" id="address" class="text" value="地址" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '地址';}" >
+                <input type="text" id="email" class="text" value="邮箱" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '邮箱';}" >
+
                 <div class="sign-up">
                     <input type="reset" value="重置">
-                    <input type="submit" onclick="myFunction()" value="注册">
-
+                    <input type="submit" id="register" value="注册">
                 </div>
                 <div class="clearfix"></div>
-
                 <div class="new">
-                    <p><label class="checkbox11"><input type="checkbox" name="checkbox"><i> </i>I agree with the terms</label></p>
-                    <p class="sign">Already register ? <a href="${pageContext.request.contextPath}/user/Login.do">Login</a></p>
+                    <p><label class="checkbox11"><input type="checkbox" id="checkbox" name="checkbox" checked="checked"><i> </i>我同意该协议</label></p>
+                    <p class="sign"><a href="${pageContext.request.contextPath}/user/Login.do">直接登录</a></p>
                     <div class="clearfix"></div>
                 </div>
             </form>
@@ -77,6 +76,8 @@
 <script src="${pageContext.request.contextPath}/static/js/scripts.js"></script>
 <!-- Bootstrap Core JavaScript -->
 <script src="${pageContext.request.contextPath}/static/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/data/login.js"></script>
+
 <script type="text/javascript">
   $("body").keydown(function () {
       if(event.keyCode == "13"){

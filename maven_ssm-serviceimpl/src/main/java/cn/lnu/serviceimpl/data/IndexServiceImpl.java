@@ -68,20 +68,26 @@ public class IndexServiceImpl implements IndexService {
         //封装总页数
         double tc = totalCount;
 
+        //计算数据页数
         Double num = Math.ceil(tc/pageSize);
 
+        //将当前页放入javabean中
         pageBean.setTotalPage(num.intValue());
 
+        //数据的起始位置
         map.put("start",(currentPage-1)*pageSize);
 
+        //数据大小
         map.put("size",pageSize);
 
-        //封装每页显示的数据
-
+        //封装每页的数据
         List<TableData> list = tableDataDao.findByPage(map);
+        System.out.println("一共有："+list.size()+"条数据");
 
+        //将每页的数据放入javabean中
         pageBean.setLists(list);
 
+        //返回javabean
         return pageBean;
     }
 
