@@ -37,4 +37,10 @@ public class UserControllerTest {
 
     }
 
+    @Test
+    public void returnSendEmail(){
+        userService.sendEmail();
+
+    }
+
 }

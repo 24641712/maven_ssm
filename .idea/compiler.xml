@@ -6,8 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="maven-dao" />
         <module name="maven_ssm-dao" />
         <module name="maven_ssm-entity" />
+        <module name="maven_ssm-serviceimpl" />
         <module name="maven_ssm-serviceImpl" />
         <module name="maven_ssm-utils" />
         <module name="maven_ssm-web" />

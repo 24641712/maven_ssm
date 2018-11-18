@@ -1,10 +1,14 @@
 package cn.lnu.serviceimpl.user;
 
+import cn.lnu.entity.data.Sendmail;
 import cn.lnu.entity.user.User;
 import cn.lnu.dao.user.UserDao;
 import cn.lnu.service.user.UserService;
+import cn.lnu.utils.CodeUtil;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
+import javax.mail.MessagingException;
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -43,6 +47,22 @@ public class UserServiceImpl implements UserService{
 
     }
 
+    @Override
+    public void sendEmail() {
+        String toEmail = "chengchuangliang@163.com";
+        String code = null;
+        CodeUtil codeUtil = new CodeUtil();
+        code = codeUtil.generateUniqueCode();
+        Sendmail sendmail = new Sendmail();
+        try {
+            sendmail.send_email(toEmail,code);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (MessagingException e) {
+            e.printStackTrace();
+        }
+
+    }
 
 
 }

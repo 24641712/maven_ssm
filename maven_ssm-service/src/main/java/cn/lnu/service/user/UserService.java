@@ -17,5 +17,7 @@ public interface UserService {
 
     public int register(User user);
 
+    public void sendEmail();
+
 
 }

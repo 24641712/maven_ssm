@@ -23,18 +23,20 @@ import javax.mail.internet.MimeMultipart;
 
 public class Sendmail {
 
-    public static int send_email(String toEmail,String subjects,String contents) throws IOException, AddressException, MessagingException{
+    public int send_email(String toEmail,String code) throws IOException, AddressException, MessagingException{
 
         String to = toEmail;
-        String subject = subjects;
-        String content = contents;
+        String subject = "邮箱验证";
+        String content = "<html><head></head><body><h1>这是一封激活邮件,激活请点击以下链接</h1><h3><a href='http://localhost:8080/RegisterDemo/ActiveServlet?code="
+                + code + "'>http://localhost:8080/RegisterDemo/ActiveServlet?code=" + code
+                + "</href></h3></body></html>";
 
         Properties properties = new Properties();
         properties.put("mail.smtp.host", "smtp.qq.com");
         properties.put("mail.smtp.port", "25");
         properties.put("mail.smtp.auth", "true");
 
-        Authenticator authenticator = new Email_Authenticator("2464171268@qq.com", "ccl246467");
+        Authenticator authenticator = new Email_Authenticator("2464171268@qq.com", "pchfwcnialuudjab");
         javax.mail.Session sendMailSession = javax.mail.Session.getDefaultInstance(properties, authenticator);
         MimeMessage mailMessage = new MimeMessage(sendMailSession);
         mailMessage.setFrom(new InternetAddress("2464171268@qq.com"));
@@ -55,4 +57,23 @@ public class Sendmail {
         Transport.send(mailMessage);
         return 1;
     }
+
+//    public static void main(String[] args) {
+//        String toEmail = "chengchuangliang@163.com";
+//        String subjects = "邮箱验证";
+//        String contents = "邮箱验证";
+//        try {
+//            send_email(toEmail,"123456");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        } catch (MessagingException e) {
+//            e.printStackTrace();
+//        }
+//
+//
+//    }
+
+
+
+
 }
