@@ -11,12 +11,12 @@
   </resultMap>
 
    <select id="login" parameterType="User" resultMap="UserResult">
-        select * from t_user where username=#{username} and password=#{password}
+        select * from users where username=#{username} and password=#{password}
     </select>
 
     <!--查找所有用户-->
   <select id="find" resultMap="UserResult">
-      select * from t_user;
+      select * from users;
   </select>
 
     <!--&lt;!&ndash;实现用户注册功能&ndash;&gt;-->
@@ -27,9 +27,15 @@
 
     <!--实现用户注册功能-->
     <insert id="register" parameterType="User" useGeneratedKeys="true" keyProperty="id">
-       insert into t_user (id,username,password)
+       insert into users (id,username,password)
        values(null,#{username},#{password});
     </insert>
+
+    <!--查找所有用户-->
+    <select id="find" resultMap="UserResult" parameterType="Integer">
+      select * from t_user where id=#{id};
+  </select>
+
 
 
 

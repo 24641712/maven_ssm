@@ -15,4 +15,6 @@ public interface UserDao {
 
     public int register(User user);
 
+    public User selectByPrimaryKey(Integer id);
+
 }

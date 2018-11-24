@@ -19,5 +19,7 @@ public interface UserService {
 
     public void sendEmail();
 
+    public User selectByPrimaryKey(Integer id);
+
 
 }

@@ -17,13 +17,11 @@ import java.util.List;
  */
 @Service("userService")
 public class UserServiceImpl implements UserService{
-
     @Resource
     private UserDao userDao;
 
     @Override
     public User login(User user) {
-
         return userDao.login(user);
     }
 
@@ -40,11 +38,8 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public int register(User user) {
-
         System.out.println("register:"+user.toString());
-
         return userDao.register(user);
-
     }
 
     @Override
@@ -62,6 +57,11 @@ public class UserServiceImpl implements UserService{
             e.printStackTrace();
         }
 
+    }
+
+    @Override
+    public User selectByPrimaryKey(Integer id) {
+        return userDao.selectByPrimaryKey(id);
     }
 
 
