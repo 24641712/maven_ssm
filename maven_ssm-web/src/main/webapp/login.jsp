@@ -60,11 +60,7 @@
                 </div>
             </form>
         </div>
-
-
     </div>
-
-
     <!--//login-top-->
 </div>
 

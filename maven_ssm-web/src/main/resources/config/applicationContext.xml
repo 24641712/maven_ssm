@@ -4,7 +4,6 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:tx="http://www.springframework.org/schema/tx"
-       xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
            http://www.springframework.org/schema/context
@@ -29,8 +28,9 @@
     <!--读取jdbc配置文件-->
     <context:property-placeholder location="classpath:config/jdbc.properties"/>
 
+
     <!-- Redis和缓存配置开始 -->
-    <!-- jedis 配置 -->
+    <!-- jedis数据源 -->
     <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig" >
         <property name="maxIdle" value="100" />
         <property name="maxWaitMillis" value="1000" />
@@ -44,14 +44,15 @@
         <constructor-arg name="port" value="6379"/>
     </bean>
 
-    <!-- redis服务器中心 -->
+    <!-- redis连接池管理工厂 -->
     <bean id="connectionFactory"  class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory" >
         <property name="poolConfig" ref="poolConfig" />
         <property name="port" value="6379" />
         <property name="hostName" value="127.0.0.1" />
-        <!-- <property name="password" value="${redis.password}" /> -->
+         <property name="password" value="123456" />
         <property name="timeout" value="10000" ></property>
     </bean >
+
     <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate" >
         <property name="connectionFactory" ref="connectionFactory" />
         <property name="keySerializer" >
@@ -63,9 +64,9 @@
     </bean >
 
     <!-- cache配置 -->
-    <!--<bean id="getCache" class="com.spring_redis.cache.GetCacheAOP" >-->
-        <!--<property name="redisTemplate" ref="redisTemplate" />-->
-    <!--</bean>-->
+    <bean id="getCache" class="cn.lnu.utils.cache.GetCacheAOP" >
+        <property name="redisTemplate" ref="redisTemplate" />
+    </bean>
 
     <!-- Redis和缓存配置结束 -->
 

@@ -55,7 +55,7 @@
 
                 <div class="new">
                     <p><label class="checkbox11"><input type="checkbox" name="checkbox"><i> </i>忘记密码?</label></p>
-                    <p class="sign">还没有账户，<a href="${pageContext.request.contextPath}/user/register.do">点击注册</a></p>
+                    <p class="sign">还没有账户，<a href="${pageContext.request.contextPath}/user/zhujie.do">点击注册</a></p>
                     <div class="clearfix"></div>
                 </div>
             </form>

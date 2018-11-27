@@ -1,4 +1,4 @@
-package cn.lnu.entity.cache;
+package cn.lnu.utils.cache;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

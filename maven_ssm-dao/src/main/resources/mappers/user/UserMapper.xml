@@ -32,8 +32,8 @@
     </insert>
 
     <!--查找所有用户-->
-    <select id="find" resultMap="UserResult" parameterType="Integer">
-      select * from t_user where id=#{id};
+    <select id="selectByPrimaryKey" resultMap="UserResult" parameterType="Integer">
+      select * from users where id=#{id};
   </select>
 
 
