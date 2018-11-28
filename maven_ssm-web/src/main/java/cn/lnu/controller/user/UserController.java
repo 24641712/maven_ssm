@@ -37,7 +37,8 @@ public class UserController {
     @ResponseBody
     @RequestMapping("/zhujie")
     public String returnZhujie(){
-        System.out.println("hello world!!!");
+        System.out.println("已查询到数据，准备缓存到redis..."+
+                userService.selectByPrimaryKey(1).getUsername());
         return "jspLogin";
     }
 

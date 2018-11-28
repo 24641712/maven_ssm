@@ -32,14 +32,40 @@ public class GetCacheAOP  {
         System.out.println("我是一个切入点");
     }
 
-    @Before("getCache()")
-    public void BeforeExe(JoinPoint joinPoint){
-        MethodSignature ms=(MethodSignature) joinPoint.getSignature();
-        Method method=ms.getMethod();
-        String ActionName = method.getAnnotation(GetCache.class).name();
-        String fieldList = method.getAnnotation(GetCache.class).value();
-        System.out.println("ActionName:"+ActionName+"  fieldList："+fieldList);
-        System.out.println("这是前置通知。");
+    @Around("getCache()")
+    public Object BeforeExe(ProceedingJoinPoint joinPoint){
+        System.out.println("调用从redis中查询的方法。。。");
+        //redis中key格式：    id
+        String redisKey = getCacheKey(joinPoint);
+
+        //获取从redis中查询到的对象
+        Object objectFromRedis = redisCache.getDataFromRedis(redisKey);
+
+        //如果查询到了
+        if(null != objectFromRedis){
+            System.out.println("从redis中查询到了数据...不需要查询数据库");
+            return objectFromRedis;
+        }
+
+        System.out.println("没有从redis中查到数据...");
+        //没有查到，那么查询数据库
+        Object object = null;
+        try {
+            object = joinPoint.proceed();//让目标方法执行
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("从数据库中查询的数据...");
+
+        System.out.println("调用把数据库查询的数据存储到redis中的方法...");
+
+        //后置：将数据库中查询的数据放到redis中
+        redisCache.setDataToRedis(redisKey, object);
+        System.out.println("redis中的数据..."+object.toString());
+        //将查询到的数据返回
+        return object;
+
     }
 
     @After("getCache()")
@@ -104,9 +130,9 @@ public class GetCacheAOP  {
      */
 
     @SuppressWarnings("unused")
-    private String getCacheKey(ProceedingJoinPoint joinPoint) {
+    private String getCacheKey(JoinPoint joinPoint) {
 
-
+        //获取被增强的方法相关信息。
         MethodSignature ms=(MethodSignature) joinPoint.getSignature();
         Method method=ms.getMethod();
         String ActionName = method.getAnnotation(GetCache.class).name();
