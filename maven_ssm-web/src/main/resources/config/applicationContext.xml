@@ -4,12 +4,15 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:util="http://www.springframework.org/schema/util"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
            http://www.springframework.org/schema/context
            http://www.springframework.org/schema/context/spring-context-4.0.xsd
            http://www.springframework.org/schema/aop
            http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+           http://www.springframework.org/schema/util
+           http://www.springframework.org/schema/util/spring-util-3.0.xsd
            http://www.springframework.org/schema/tx
            http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
@@ -30,9 +33,22 @@
     <context:property-placeholder location="classpath:config/jdbc.properties"
                                   ignore-unresolvable="true"/>
 
-    <!--读取redis配置文件-->
-    <context:property-placeholder location="classpath:config/redis.properties"/>
+    <bean id="redisCache" class="cn.lnu.utils.RedisCache"></bean>
 
+    <!--读取redis配置文件-->
+    <!--<context:property-placeholder location="classpath:config/redis.properties"/>-->
+
+    <bean id="prop" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="locations">
+            <list>
+                <value>classpath:config/redis.properties</value>
+            </list>
+        </property>
+        <property name="fileEncoding" value="UTF-8"/>
+    </bean>
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
+       <property name="properties" ref="prop"></property>
+    </bean>
 
     <!-- Redis和缓存配置开始 -->
     <!-- jedis数据源 -->
@@ -40,6 +56,14 @@
         <property name="maxIdle" value="${redis.maxIdle}" />
         <property name="maxWaitMillis" value="${redis.maxWaitMillis}" />
         <property name="testOnBorrow" value="${redis.testOnBorrow}" />
+    </bean>
+
+    <!-- redis连接池 -->
+    <bean id="jedisPool" class="redis.clients.jedis.JedisPool" destroy-method="close">
+        <constructor-arg name="poolConfig" ref="poolConfig"/>
+        <constructor-arg name="host" value="${redis.host}"/>
+        <!--<constructor-arg name="password" value="123456"/>-->
+        <constructor-arg name="port" value="${redis.port}"/>
     </bean>
 
     <!-- spring提供的连接工厂 -->

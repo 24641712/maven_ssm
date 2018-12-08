@@ -36,10 +36,10 @@ public class UserController {
     @GetCache(name="room",value="id")
     @ResponseBody
     @RequestMapping("/zhujie")
-    public String returnZhujie(){
+    public Object returnZhujie(){
         System.out.println("已查询到数据，准备缓存到redis..."+
                 userService.selectByPrimaryKey(1).getUsername());
-        return "jspLogin";
+        return userService.selectByPrimaryKey(1);
     }
 
     @ResponseBody
