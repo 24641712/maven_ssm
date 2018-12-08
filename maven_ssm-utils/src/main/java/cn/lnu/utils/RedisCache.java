@@ -51,7 +51,7 @@ public class RedisCache {
             return null;
         }
 
-        //查询到了，反序列化
+        //查询到了，反序列化打个字试试
         return SerializeUtil.unSerialize(result);
     }
 
