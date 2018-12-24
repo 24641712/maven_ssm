@@ -33,7 +33,6 @@ public class UserController {
     public String returnLogin(Model model){
         model.addAttribute("message","我要登录");
         System.out.println("Login(登录)");
-        System.out.println("改变一下");
         return "jspLogin";
     }
 
