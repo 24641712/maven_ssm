@@ -1,4 +1,5 @@
-//实现登录验证功能
+
+//实现用户登录验证功能
 $(function () {
     $("#submit").click(function () {
         username=$("#username").val();
@@ -24,36 +25,47 @@ $(function () {
     });
 });
 
-//实现注册功能
+
+//实现用户注册功能
 $(function () {
     $("#register").click(function () {
           username = $("#username").val();
           password1 = $("#password1").val();
           password2 = $("#password2").val();
-          phone = $("phone").val();
-          address = $("address").val();
+          phone = $("#phone").val();
+          address = $("#address").val();
           email = $("#email").val();
           checkbox = $("#checkbox").prop('checked');
+          alert("")
           if(checkbox == false){
               alert("请先同意该协议");
           }else {
-              alert(email + " " + password1 + " " + password2 );
-              var regInfo = {"username":email,"password":password1};
+              var regInfo = {username:username,password:password1,phone:phone,
+              address:address,email:email};
               $.ajax({
-                  url: "./userRegister.do",
-                  type: 'POST',
-                  dataType: 'text',
+                  type: 'post',
+                  url: "./hello.do",
+                  dataType: "json",
                   data: regInfo,
-                  success:return_json,
-                  error:return_error
+                  success:function(data){
+                      if(data == "OK"){
+                          alert("注册成功");
+                      }else{
+                          alert("注册失败");
+                      }
+                  },
+                  error:function (jqXHR) {
+                      alert("发生错误："+jqXHR.status);
+                  }
               });
-              function return_json(json) {
-                  alert("注册成功");
-              }
-              function return_error(XMLHttpRequest,textStatus,errorThrown) {
-                  alert(textStatus)
-              }
 
+              // function return_success(json) {
+              //     alert("注册成功");
+              // }
+              // function re
+              // turn_error(XMLHttpRequest,textStatus,errorThrown) {
+              //     alert(textStatus)
+              // }
           }
     })
 })

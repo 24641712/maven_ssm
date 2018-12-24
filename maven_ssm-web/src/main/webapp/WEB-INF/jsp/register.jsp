@@ -37,12 +37,12 @@
         <div class="login" style="height: 340px;width: 400px;margin-left: 50px">
             <h3 class="inner-tittle t-inner">Augment</h3>
             <form>
-                <input type="text" id="username" class="text" value="用户名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}" >
+                <input type="text" id="username" class="text" value="1" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '1';}" >
                 <input type="password" id="password1" value="1" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '1';}">
                 <input type="password" id="password2" value="1" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '1';}">
-                <input type="text" id="phone" class="text" value="电话" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '电话';}" >
-                <input type="text" id="address" class="text" value="地址" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '地址';}" >
-                <input type="text" id="email" class="text" value="邮箱" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '邮箱';}" >
+                <input type="text" id="phone" class="text" value="1" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '1';}" >
+                <input type="text" id="address" class="text" value="1" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '1';}" >
+                <input type="text" id="email" class="text" value="1" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '1';}" >
 
                 <div class="sign-up">
                     <input type="reset" value="重置">

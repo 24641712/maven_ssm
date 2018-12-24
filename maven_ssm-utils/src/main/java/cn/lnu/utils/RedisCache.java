@@ -22,7 +22,6 @@ public class RedisCache {
     private byte[] result;
 
 //    @Value("#{prop['redis.password']}")
-    @Value("123456")
     private String password;
 
     public RedisCache(){ }
