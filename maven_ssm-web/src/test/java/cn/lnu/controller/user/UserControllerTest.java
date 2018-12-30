@@ -2,19 +2,15 @@ package cn.lnu.controller.user;
 
 import cn.lnu.entity.user.User;
 import cn.lnu.service.user.UserService;
-import cn.lnu.utils.cache.GetCache;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import javax.annotation.Resource;
 
 /**
- * @author： CCL
- * @date:
- * description:
+ * 测试单元
+ * @author： ccl
  */
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -22,7 +18,7 @@ import javax.annotation.Resource;
                               "classpath:config/spring-mvc.xml"})
 public class UserControllerTest {
 
-    @Resource
+    @Autowired
     private UserService userService;
 
     @Test

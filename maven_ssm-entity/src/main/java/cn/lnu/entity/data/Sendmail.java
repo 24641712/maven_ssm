@@ -1,9 +1,8 @@
 package cn.lnu.entity.data;
 
 /**
- * Created by CCL on 2018/10/31 0031 下午 5:26
- *
- * @description:
+ *实现发送邮箱的工具类
+ * @author ccl
  */
 
 import java.io.IOException;
@@ -21,6 +20,7 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
+
 public class Sendmail {
 
     public int send_email(String toEmail,String code) throws IOException, AddressException, MessagingException{
@@ -36,44 +36,33 @@ public class Sendmail {
         properties.put("mail.smtp.port", "25");
         properties.put("mail.smtp.auth", "true");
 
+        //发送者的邮箱和授权码
         Authenticator authenticator = new Email_Authenticator("2464171268@qq.com", "pchfwcnialuudjab");
         javax.mail.Session sendMailSession = javax.mail.Session.getDefaultInstance(properties, authenticator);
         MimeMessage mailMessage = new MimeMessage(sendMailSession);
+        //邮箱的发送者
         mailMessage.setFrom(new InternetAddress("2464171268@qq.com"));
 
+        //邮箱接收
         // Message.RecipientType.TO属性表示接收者的类型为TO
         mailMessage.setRecipient(Message.RecipientType.TO, new InternetAddress(to));
+        //发送邮件的标题
         mailMessage.setSubject(subject, "UTF-8");
+        //发送邮件的日期
         mailMessage.setSentDate(new Date());
 
-        // MiniMultipart类是一个容器类，包含MimeBodyPart类型的对象
+        //MiniMultipart类是一个容器类，包含MimeBodyPart类型的对象
         Multipart mainPart = new MimeMultipart();
 
-        // 创建一个包含HTML内容的MimeBodyPart
+        //创建一个包含HTML内容的MimeBodyPart
         BodyPart html = new MimeBodyPart();
+        //设置邮件的内容的格式和字节码
         html.setContent(content.trim(), "text/html; charset=utf-8");
         mainPart.addBodyPart(html);
         mailMessage.setContent(mainPart);
         Transport.send(mailMessage);
         return 1;
     }
-
-//    public static void main(String[] args) {
-//        String toEmail = "chengchuangliang@163.com";
-//        String subjects = "邮箱验证";
-//        String contents = "邮箱验证";
-//        try {
-//            send_email(toEmail,"123456");
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        } catch (MessagingException e) {
-//            e.printStackTrace();
-//        }
-//
-//
-//    }
-
-
 
 
 }

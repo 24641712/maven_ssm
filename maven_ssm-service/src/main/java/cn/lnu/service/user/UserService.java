@@ -6,7 +6,7 @@ import cn.lnu.entity.user.User;
 import java.util.List;
 
 /**
- * @author ChengChuangLiang
+ * @author ccl
  * @date 2018/7/21
  */
 @Resource
@@ -20,6 +20,4 @@ public interface UserService {
     public void sendEmail();
 
     public User selectByPrimaryKey(Integer id);
-
-
 }

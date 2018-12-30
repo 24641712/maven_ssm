@@ -20,6 +20,9 @@ public class UserServiceImpl implements UserService{
     @Resource
     private UserDao userDao;
 
+    @Resource
+    private Sendmail sendmail;
+
     @Override
     public User login(User user) {
         return userDao.login(user);
@@ -48,7 +51,6 @@ public class UserServiceImpl implements UserService{
         String code = null;
         CodeUtil codeUtil = new CodeUtil();
         code = codeUtil.generateUniqueCode();
-        Sendmail sendmail = new Sendmail();
         try {
             sendmail.send_email(toEmail,code);
         } catch (IOException e) {
