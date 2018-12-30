@@ -24,8 +24,7 @@
     <context:component-scan base-package="cn.lnu" />
     <context:component-scan base-package="cn.lnu.utils"/>
 
-    <bean id="monkey" class="cn.lnu.entity.user.Monkey"/>
-
+    <!--此处定义bean，方便用注解来使用该类-->
     <bean id="sendmail" class="cn.lnu.entity.data.Sendmail"/>
 
     <!--避免IE执行AJAX时，返回JSON出现下载文件 -->
