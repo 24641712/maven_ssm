@@ -1,10 +1,12 @@
 package cn.lnu.controller.user;
 
+import cn.lnu.entity.user.Monkey;
 import cn.lnu.entity.user.User;
 import cn.lnu.service.user.UserService;
 import cn.lnu.utils.cache.GetCache;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -21,8 +23,11 @@ import javax.annotation.Resource;
                               "classpath:config/spring-mvc.xml"})
 public class UserControllerTest {
 
-    @Resource
+    @Autowired
     private UserService userService;
+
+    @Autowired
+    private Monkey monkey;
 
     @Test
     public void returnRegister() {
@@ -34,6 +39,11 @@ public class UserControllerTest {
     @Test
     public void returnSendEmail(){
         userService.sendEmail();
+    }
+
+    @Test
+    public void returnMonkry(){
+        System.out.println(monkey.toString());
     }
 
 

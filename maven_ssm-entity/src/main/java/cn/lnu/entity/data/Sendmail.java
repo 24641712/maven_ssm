@@ -20,6 +20,7 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
+
 public class Sendmail {
 
     public int send_email(String toEmail,String code) throws IOException, AddressException, MessagingException{
