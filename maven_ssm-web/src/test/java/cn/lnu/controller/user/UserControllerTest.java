@@ -12,9 +12,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 
 /**
- * @author： CCL
- * @date:
- * description:
+ * 测试单元
+ * @author： ccl
  */
 
 @RunWith(SpringJUnit4ClassRunner.class)

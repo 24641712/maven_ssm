@@ -5,6 +5,7 @@ import cn.lnu.entity.user.User;
 import cn.lnu.dao.user.UserDao;
 import cn.lnu.service.user.UserService;
 import cn.lnu.utils.CodeUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import javax.mail.MessagingException;
@@ -19,6 +20,9 @@ import java.util.List;
 public class UserServiceImpl implements UserService{
     @Resource
     private UserDao userDao;
+
+    @Resource
+    private Sendmail sendmail;
 
     @Override
     public User login(User user) {
@@ -48,7 +52,7 @@ public class UserServiceImpl implements UserService{
         String code = null;
         CodeUtil codeUtil = new CodeUtil();
         code = codeUtil.generateUniqueCode();
-        Sendmail sendmail = new Sendmail();
+//        Sendmail sendmail = new Sendmail();
         try {
             sendmail.send_email(toEmail,code);
         } catch (IOException e) {

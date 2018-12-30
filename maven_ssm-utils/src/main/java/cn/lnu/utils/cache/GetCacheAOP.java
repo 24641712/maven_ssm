@@ -14,8 +14,7 @@ import java.io.Serializable;
 import java.lang.reflect.Method;
 
 /**
- * Created by CCL on 2018/11/23 0023 下午 2:54
- *
+ *使用自定义注解实现aop
  * @description:
  */
 @Aspect
