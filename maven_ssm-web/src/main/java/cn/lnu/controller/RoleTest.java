@@ -1,4 +1,4 @@
-package cn.lnu.controller.user;
+package cn.lnu.controller;
 
 import cn.lnu.entity.user.Role;
 import org.springframework.context.ApplicationContext;

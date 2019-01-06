@@ -1,4 +1,4 @@
-package cn.lnu.controller.user;
+package cn.lnu.controller;
 
 import cn.lnu.entity.MD5.MD5Util;
 import cn.lnu.entity.user.User;
