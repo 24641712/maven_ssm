@@ -5,6 +5,9 @@ package cn.lnu.entity.data;
  * @author ccl
  */
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
+
 import java.io.IOException;
 import java.util.Date;
 import java.util.Properties;
@@ -20,7 +23,7 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
-
+@Component //将普通的POJO实例化到spring容器中
 public class Sendmail {
 
     public int send_email(String toEmail,String code) throws IOException, AddressException, MessagingException{

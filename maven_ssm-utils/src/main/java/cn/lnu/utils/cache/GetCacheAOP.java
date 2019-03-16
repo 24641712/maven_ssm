@@ -44,14 +44,14 @@ public class GetCacheAOP  {
         //如果查询到了
         if(null != objectFromRedis){
             System.out.println("从redis中查询到了数据"+objectFromRedis+"不需要查询数据库");
-            return objectFromRedis;
+            return objectFromRedis;//返回后不执行Controller中的方法
         }
 
         System.out.println("没有从redis中查到数据...");
         //没有查到，那么查询数据库
         Object object = null;
         try {
-            object = joinPoint.proceed();//让目标方法执行
+            object = joinPoint.proceed();//执行Controller中的方法，得到查询结果，然后执行环绕中的后半部分。
         } catch (Throwable e) {
             e.printStackTrace();
         }
@@ -64,7 +64,7 @@ public class GetCacheAOP  {
         redisCache.setDataToRedis(redisKey, object);
         System.out.println("redis中的数据..."+object.toString());
         //将查询到的数据返回
-        return object;
+        return object;//将查询结果返回
 
     }
 

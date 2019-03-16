@@ -11,9 +11,9 @@ public interface UserDao {
 
     public User login(User user);
 
-    public List<User> find();
+    public List<User> findAllUsers();
 
-    public int register(User user);
+    public int registerUser(User user);
 
     public User selectByPrimaryKey(Integer id);
 

@@ -13,9 +13,9 @@ import java.util.List;
 public interface UserService {
     public User login(User user);
 
-    public List<User> find();
+    public List<User> findAllUsers();
 
-    public int register(User user);
+    public int registerUser(User user);
 
     public void sendEmail();
 

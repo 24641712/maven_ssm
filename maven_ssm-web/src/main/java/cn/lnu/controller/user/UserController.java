@@ -1,4 +1,4 @@
-package cn.lnu.controller;
+package cn.lnu.controller.user;
 
 import cn.lnu.entity.MD5.MD5Util;
 import cn.lnu.entity.user.User;
@@ -18,10 +18,10 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * @author CCL
- * @date 2018/7/21
- */
-@Controller
+*用户的控制层
+*@author ccl
+**/
+@Controller//标注控制层
 @RequestMapping("/user")
 public class UserController {
 
@@ -48,6 +48,10 @@ public class UserController {
         return "/jspLogin";
     }
 
+    /*
+    *使用redis实现缓存功能，提高查询效率
+    *@return
+    **/
     @GetCache(name="room",value="id")
     @ResponseBody
     @RequestMapping("/zhujie")
@@ -57,6 +61,10 @@ public class UserController {
         return userService.selectByPrimaryKey(1);
     }
 
+    /*
+    *
+    *@return
+    **/
     @ResponseBody
     @RequestMapping(value = "/loginCheck",method = RequestMethod.POST)
     public String returnLoginCheck(String username,String password,HttpServletRequest request){

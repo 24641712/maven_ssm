@@ -22,10 +22,8 @@
     <!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 -->
     <!--注：如果写成cn.lnu.controller,可能导致userService无法注入-->
     <context:component-scan base-package="cn.lnu" />
-    <context:component-scan base-package="cn.lnu.utils"/>
+    <!--<context:component-scan base-package="cn.lnu.utils"/>-->
 
-    <!--此处定义bean，方便用注解来使用该类-->
-    <bean id="sendmail" class="cn.lnu.entity.data.Sendmail"/>
 
     <!--避免IE执行AJAX时，返回JSON出现下载文件 -->
     <bean id="mappingJacksonHttpMessageConverter"
@@ -74,7 +72,6 @@
         <property name="prefix" value="/WEB-INF/jsp/" />
         <property name="suffix" value=".jsp" />
     </bean>
-
 
     <!--
        自定义拦截器 防止越过登录页面通过地址直接访问

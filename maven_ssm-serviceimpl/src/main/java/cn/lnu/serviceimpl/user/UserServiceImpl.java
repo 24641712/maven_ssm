@@ -12,11 +12,14 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * @author ChengChuangLiang
- * @date 2018/7/21
- */
-@Service("userService")
+*用户的业务逻辑层
+*
+*@author
+**/
+
+@Service("userService")//标注服务层
 public class UserServiceImpl implements UserService{
+
     @Resource
     private UserDao userDao;
 
@@ -29,10 +32,10 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public List<User> find() {
+    public List<User> findAllUsers() {
         List<User> list = null;
         try {
-             list = userDao.find(); //执行异常打印异常信息
+             list = userDao.findAllUsers(); //执行异常打印异常信息
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -40,9 +43,9 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public int register(User user) {
+    public int registerUser(User user) {
         System.out.println("register:"+user.toString());
-        return userDao.register(user);
+        return userDao.registerUser(user);
     }
 
     @Override

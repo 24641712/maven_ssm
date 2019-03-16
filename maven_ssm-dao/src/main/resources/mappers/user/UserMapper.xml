@@ -15,7 +15,7 @@
     </select>
 
     <!--查找所有用户-->
-  <select id="find" resultMap="UserResult">
+  <select id="findAllUsers" resultMap="UserResult">
       select * from users;
   </select>
 
@@ -26,7 +26,7 @@
     <!--</insert>-->
 
     <!--实现用户注册功能-->
-    <insert id="register" parameterType="User" useGeneratedKeys="true" keyProperty="id">
+    <insert id="registerUser" parameterType="User" useGeneratedKeys="true" keyProperty="id">
        insert into users (id,username,password)
        values(null,#{username},#{password});
     </insert>
